@@ -1,4 +1,3 @@
-// import React, { useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
@@ -8,6 +7,8 @@ import banner02 from "../../assets/images/landscape.jpg"
 import banner03 from "../../assets/images/landscape.jpg"
 import styles from "./banner.module.scss"
 import { BiSolidPhoneCall } from "react-icons/bi"
+import { IoMdArrowRoundUp } from "react-icons/io"
+import { useState, useEffect } from "react"
 
 const images = [
   {
@@ -34,55 +35,84 @@ const images = [
 ]
 
 const Banner = () => {
+  const [showArrow, setShowArrow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowArrow(true)
+      } else {
+        setShowArrow(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const handleArrowClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      id="home"
-      loop={true}
-      navigation={true}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
-      modules={[Autoplay, Navigation]}
-    >
-      {images.map((item, index) => (
-        <SwiperSlide key={index} className={styles.bannerSlide}>
-          <div className={styles.slideContent}>
-            <img
-              className={styles.bannerImage}
-              src={item.image}
-              alt={item.title}
-            />
-            <div className={styles.heading}>
-              <h5>{item.title}</h5>
-              <h2>
-                {item.about1}
-                <br />
-                {item.about2}
-                <br />
-                {item.about3}
-              </h2>
+    <>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        id="home"
+        loop={true}
+        navigation={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, Navigation]}
+      >
+        {images.map((item, index) => (
+          <SwiperSlide key={index} className={styles.bannerSlide}>
+            <div className={styles.slideContent}>
+              <img
+                className={styles.bannerImage}
+                src={item.image}
+                alt={item.title}
+              />
+              <div className={styles.heading}>
+                <h5>{item.title}</h5>
+                <h2>
+                  {item.about1}
+                  <br />
+                  {item.about2}
+                  <br />
+                  {item.about3}
+                </h2>
 
-              <div className={styles.contact}>
-                <a href="#service" className={styles.btn}>
-                  GET STARTED
-                </a>
+                <div className={styles.contact}>
+                  <a href="#service" className={styles.btn}>
+                    GET STARTED
+                  </a>
 
-                <div className={styles.singleComponent}>
-                  <BiSolidPhoneCall className={styles.icon} />
-                  <div className={styles.info}>
-                    <span>Call Us Now</span>
-                    <a href="#">+ 966 545831834</a>
+                  <div className={styles.singleComponent}>
+                    <BiSolidPhoneCall className={styles.icon} />
+                    <div className={styles.info}>
+                      <span>Call Us Now</span>
+                      <a href="#">+ 966 545831834</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      {showArrow && (
+        <div className={styles.arrow} onClick={handleArrowClick}>
+          <IoMdArrowRoundUp className={styles.icon_arrow} />
+        </div>
+      )}
+    </>
   )
 }
 

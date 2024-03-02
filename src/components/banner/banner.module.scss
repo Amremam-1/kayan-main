@@ -237,3 +237,33 @@
     font-size: 1rem;
   }
 }
+
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  cursor: pointer;
+
+  .icon_arrow {
+    color: #fff;
+    animation: moveUpDown 2s ease-in-out infinite;
+  }
+
+  @keyframes moveUpDown {
+    0%,
+    100% {
+      transform: translateY(0); /* بداية ونهاية الحركة: لا تحريك */
+    }
+    50% {
+      transform: translateY(-5px); /* في منتصف الحركة: تحريك السهم لأعلى */
+    }
+  }
+}

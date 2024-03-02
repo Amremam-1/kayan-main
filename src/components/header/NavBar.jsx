@@ -3,7 +3,7 @@ import { MdElectricBolt } from "react-icons/md"
 import { MdOutlineEmail } from "react-icons/md"
 import { IoLocationOutline } from "react-icons/io5"
 import styles from "./styles.module.scss"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import SideBar from "../sideBar/SideBar"
 import logo from "../../assets/images/logo2.jpg"
@@ -36,6 +36,27 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState(-1)
   const [isSideBarOpen, setSideBarOpen] = useState(false)
 
+  const headerRef = useRef(null)
+
+  useEffect(() => {
+    const headerSticky = () => {
+      if (headerRef.current !== null)
+        if (
+          document.body.scrollTop > 179 ||
+          document.documentElement.scrollTop > 179
+        ) {
+          headerRef.current.classList.add(styles.sticky)
+        } else {
+          headerRef.current.classList.remove(styles.sticky)
+        }
+    }
+
+    window.addEventListener("scroll", headerSticky)
+
+    return () => {
+      window.removeEventListener("scroll", headerSticky)
+    }
+  })
   const toggleSideBar = () => {
     setSideBarOpen(!isSideBarOpen)
   }
@@ -118,7 +139,7 @@ const NavBar = () => {
           </Container>
         </div>
 
-        <div className={styles.header_sticky}>
+        <div className={styles.header_sticky} ref={headerRef}>
           <Container>
             <Row>
               <Col lg="12">

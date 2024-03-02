@@ -10,10 +10,7 @@ import service06 from "../../assets/images/service06.jpg"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
-import { Autoplay } from "swiper/modules"
-import { Pagination } from "swiper/modules"
-import { useState } from "react"
-import Modal from "./Model"
+import { Pagination, Autoplay } from "swiper/modules"
 
 const servicesItems = [
   {
@@ -23,6 +20,12 @@ const servicesItems = [
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
     content: "01",
     id: "one",
+    images: [
+      "/src/assets/images/Picture48.jpg",
+      "/src/assets/images/Picture143.jpg",
+      "/src/assets/images/Picture144.jpg",
+      "/src/assets/images/Picture152.jpg",
+    ],
   },
   {
     image: service02,
@@ -31,6 +34,11 @@ const servicesItems = [
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     content: "02",
     id: "two",
+    images: [
+      "/src/assets/images/11.jpg",
+      "/src/assets/images/22.jpg",
+      "/src/assets/images/33.jpg",
+    ],
   },
   {
     image: service03,
@@ -39,6 +47,11 @@ const servicesItems = [
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     content: "03",
     id: "three",
+    images: [
+      "/src/assets/images/muslam-01.jpg",
+      "/src/assets/images/muslam02.jpg",
+      "/src/assets/images/muslam04.jpg",
+    ],
   },
   {
     image: service05,
@@ -47,6 +60,11 @@ const servicesItems = [
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
     content: "04",
     id: "four",
+    images: [
+      "/src/assets/images/شعله (1).jpg",
+      "/src/assets/images/شعله (2).jpg",
+      "/src/assets/images/شعله (3).jpg",
+    ],
   },
   {
     image: service04,
@@ -55,6 +73,12 @@ const servicesItems = [
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
     content: "05",
     id: "five",
+    images: [
+      "/src/assets/images/مدارس واحة جدة 01  .jpg",
+      "/src/assets/images/مدارس واحة جدة 02  .jpg",
+      "/src/assets/images/مدارس واحة جدة 03  .jpg",
+      "/src/assets/images/مدارس واحة جدة 04  .jpg",
+    ],
   },
   {
     image: service06,
@@ -62,23 +86,19 @@ const servicesItems = [
     discription: "Ensuring longevity and functionality through regular upkeep.",
     content: "06",
     id: "six",
+    images: [
+      "/src/assets/images/Picture163.jpg",
+      "/src/assets/images/Picture164.png",
+      "/src/assets/images/Picture165.png",
+      "/src/assets/images/Picture166.png",
+      "/src/assets/images/Picture167.png",
+      "/src/assets/images/Picture168.png",
+      "/src/assets/images/Picture169.png",
+    ],
   },
 ]
 
 const Services = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [viewService, setViewService] = useState(null)
-  const [showOverlay, setShowOverlay] = useState(false)
-
-  const handleService = (index) => {
-    setViewService(index)
-    setShowOverlay(true)
-  }
-
-  const handleCloseOverlay = () => {
-    setShowOverlay(false)
-  }
-
   return (
     <section className={styles.services} id="service">
       <Container className={styles.services_container}>
@@ -94,12 +114,8 @@ const Services = () => {
             slidesPerView={3}
             id="home"
             loop={true}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
             pagination={true}
-            modules={[Autoplay, Pagination]}
+            modules={[Pagination]}
             breakpoints={{
               2560: {
                 slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
@@ -124,31 +140,42 @@ const Services = () => {
             {servicesItems.map((item, index) => (
               <SwiperSlide key={index} className={styles.bannerSlide}>
                 <div className={styles.serviceCart}>
-                  <div className={styles.serviceImg}>
-                    <img src={item.image} alt="" />
-                    <span className={styles.badge}>{item.content}</span>
-                  </div>
-
+                  <Swiper
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                    }}
+                    pagination={true}
+                    initialSlide={0}
+                    touch={true} // تمكين التحكم باللمس
+                    style={{ width: "100%", height: "300px" }}
+                    modules={[Pagination, Autoplay]}
+                  >
+                    {item.images.map((image, index) => (
+                      <SwiperSlide key={index}>
+                        <img
+                          src={image}
+                          alt=""
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            borderRadius: "5px",
+                          }}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                   <div className={styles.serviceItem}>
                     <h5>{item.title}</h5>
                     <p>{item.discription}</p>
-
-                    <button
-                      className={styles.btn}
-                      onClick={() => handleService(index)}
-                    >
-                      View Service
-                    </button>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
-
-            {showOverlay && (
-              <div className={styles.overlay}>
-                <Modal handleCloseOverlay={handleCloseOverlay} />
-              </div>
-            )}
           </Swiper>
         </Row>
       </Container>
