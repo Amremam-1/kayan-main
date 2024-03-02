@@ -4,7 +4,7 @@ import service01 from "../../assets/images/service01.jpg"
 import service02 from "../../assets/images/service02.png"
 import service03 from "../../assets/images/service03.png"
 import service04 from "../../assets/images/service04.jpg"
-import service05 from "../../assets/images/مدارس الامجاد 02.jpg"
+import service05 from "../../assets/Downloads/Picture168.png"
 import service06 from "../../assets/images/service06.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react"
