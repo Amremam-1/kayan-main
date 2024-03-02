@@ -22,13 +22,6 @@ const services = [
       "/src/assets/images/Picture49.jpg",
       "/src/assets/images/Picture50.jpg",
       "/src/assets/images/Picture51.png",
-      "/src/assets/images/Picture52.jpg",
-      "/src/assets/images/Picture53.jpg",
-      "/src/assets/images/Picture54.jpg",
-      "/src/assets/images/Picture55.jpg",
-      "/src/assets/images/Picture56.jpg",
-      "/src/assets/images/Picture57.jpg",
-      "/src/assets/images/Picture58.jpg",
     ],
   },
   {
@@ -41,8 +34,6 @@ const services = [
       "/src/assets/images/desginintro02.jpg",
       "/src/assets/images/desginintro03.jpg",
       "/src/assets/images/desginintro04.jpg",
-      "/src/assets/images/desginintro05.jpg",
-      "/src/assets/images/desginintro06.jpg",
     ],
   },
   {
@@ -78,8 +69,6 @@ const services = [
       "/src/assets/images/مدارس واحة جدة 02  .jpg",
       "/src/assets/images/مدارس واحة جدة 03  .jpg",
       "/src/assets/images/مدارس واحة جدة 04  .jpg",
-      "/src/assets/images/مدارس واحة جدة 05  .jpg",
-      "/src/assets/images/مدارس واحة جدة 06  .jpg",
     ],
   },
   {
@@ -91,8 +80,6 @@ const services = [
       "/src/assets/images/مدارس الامجاد 02.jpg",
       "/src/assets/images/مدارس الامجاد 03.jpg",
       "/src/assets/images/مدارس الامجاد 04.jpg",
-      "/src/assets/images/مدارس الامجاد 05.jpg",
-      "/src/assets/images/مدارس الامجاد 06.jpg",
     ],
   },
 ]
@@ -140,7 +127,7 @@ const Modal = ({ handleCloseOverlay }) => {
                       centeredSlides={true}
                       autoplay={{
                         delay: 2500,
-                        disableOnInteraction: false,
+                        // disableOnInteraction: false,
                       }}
                       pagination={{
                         clickable: true,
