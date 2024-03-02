@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./style/styles.css"
-import Carousel from "react-bootstrap/Carousel"
+// import Carousel from "react-bootstrap/Carousel"
 import { FaRegTimesCircle } from "react-icons/fa"
 
 const services = [
@@ -111,7 +111,7 @@ const Modal = ({ handleCloseOverlay }) => {
                   </div>
 
                   <div className="images">
-                    <Carousel>
+                    {/* <Carousel>
                       {selectedService.images.map((image, index) => (
                         // eslint-disable-next-line react/jsx-key
                         <Carousel.Item>
@@ -120,7 +120,13 @@ const Modal = ({ handleCloseOverlay }) => {
                           </div>
                         </Carousel.Item>
                       ))}
-                    </Carousel>
+                    </Carousel> */}
+                    {selectedService.images.map((image, index) => (
+                      // eslint-disable-next-line react/jsx-key
+                      <div className="slideContainer">
+                        <img src={image} alt={`Slide ${index + 1}`} />
+                      </div>
+                    ))}
 
                     <button className="closeicon" onClick={handleModalClick}>
                       <FaRegTimesCircle className="icon" />
