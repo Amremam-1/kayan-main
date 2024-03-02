@@ -1,0 +1,126 @@
+.side_bar {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 465px;
+    padding: 40px 30px;
+    padding-top: 50px;
+    height: 100%;
+    /* display: block; */
+    background-color: white;
+    backdrop-filter: blur(7px);
+    z-index: 1900;
+    transition: all 600ms ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow: visible;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width : 991px) {
+    .side_bar {
+        width: 320px;
+        overflow-y: auto;
+    }
+}
+
+
+
+.side_bar.open {
+    transform: translateX(0);
+}
+
+.close {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: auto;
+}
+
+.close .close_Icon {
+    color: #000;
+    height: 30px;
+    width: 30px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.mobile_menu {
+    display: block;
+}
+
+.mobile_menu nav {
+    margin-top: 30px;
+}
+
+.mobile_menu nav ul {
+    padding: 0 20px;
+}
+
+.mobile_menu nav ul li {
+    font-size: var(--font-size-b1);
+    line-height: var(--line-height-b1);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: var(--color-body);
+}
+
+.mobile_menu nav ul li:hover {
+    color: var(--color-primary);
+}
+
+.mobile_menu nav ul li a {
+    padding: 12px 0 17px 0;
+    border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+
+.social_wrapper_one {
+    margin-top: 50px;
+}
+
+.social_wrapper_one ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+.social_wrapper_one ul li {
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size-b1);
+    line-height: var(--line-height-b1);
+}
+
+.social_wrapper_one ul li a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #171717;
+    border: 1px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline-style: none;
+    transition: 0.3s;
+}
+
+.social_wrapper_one ul li a:hover {
+    background: var(--color-primary);
+}
+
+.social_wrapper_one ul li a .social_icon {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 14px;
+    color: #FFFFFF;
+}

@@ -1,0 +1,90 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+/* Css Variables */
+
+:root {
+    --color-primary: #161148;
+    --secondry: #39a9e0;
+    --yellow-FF9: #deb448;
+    --yellow-FE: #9e722a;
+    --transition: all 0.3s ease-in-out;
+
+}
+
+/* Reset browser default */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: #f2f3f5;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+section {
+    padding: 50px 0;
+    background-color: #f2f3f5;
+
+}
+
+.span-title {
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 61px;
+    color: #0C0A0A;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+}
+
+@media(max-width: 768px) {
+    .section-title {
+        font-size: 22px;
+
+    }
+}
+
+@media(max-width: 465px) {
+    .section-title {
+        font-size: 19px;
+        line-height: 30px;
+        margin-top: 20px
+    }
+}

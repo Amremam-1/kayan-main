@@ -1,0 +1,227 @@
+// .title {
+//   text-align: center;
+//   margin-bottom: 30px;
+// }
+// .slide {
+//   overflow: hidden;
+//   margin-bottom: 50px;
+
+//   .slideContainer {
+//     position: relative;
+//     width: 100%;
+//     aspect-ratio: 16 / 11;
+//     border-radius: 5px;
+//     overflow: hidden;
+//     cursor: pointer;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       transition: 0.6s;
+
+//       &:hover {
+//         transform: scale(1.1);
+//       }
+//     }
+//   }
+
+//   .slideText {
+//     position: absolute;
+//     bottom: 20px;
+//     right: 0;
+//     left: 0;
+//     margin: auto;
+//     padding: 33px;
+//     opacity: 0;
+//     transition: 1s;
+//     background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+//     width: 90%;
+//     max-width: 400px;
+//   }
+
+//   .slideText.active {
+//     opacity: 1;
+//   }
+// }
+
+// .overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.8);
+//   z-index: 9999; // للتأكد من أن الـ overlay تظهر فوق العناصر الأخرى
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slide {
+  // overflow: hidden;
+  margin-bottom: 50px;
+
+  .slideContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.6s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .slideText {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 33px;
+    opacity: 0;
+    transition: 1s;
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .slideText.active {
+    opacity: 1;
+  }
+}
+
+.team {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f3f5 100%);
+  padding: 30px;
+  padding-bottom: 180px !important;
+  /* width: 100%; */
+}
+
+.team .wrapper {
+  position: relative;
+}
+
+.wrapperImg {
+  overflow: hidden;
+  display: block;
+}
+
+.wrapperImg img {
+  transition: 0.5s;
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapperImg img:hover {
+  transform: scale(1.1);
+}
+
+.inner {
+  text-align: center;
+  padding: 45px 20px;
+  background: #ffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -144px;
+  width: 100.5%;
+  transition: 1s;
+}
+
+.name h5 {
+  font-size: 28px;
+  transition: 0.3s;
+  line-height: 1.24;
+  word-break: break-word;
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.4074;
+  color: var(--color-heading-1);
+}
+
+.inner .desig {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6e777d;
+}
+
+.infoWrapper {
+  margin-top: 0px;
+  margin-bottom: -15px;
+  max-height: 0;
+  transition: 1s;
+  height: 0;
+  overflow: hidden;
+}
+
+.team:hover .infoWrapper {
+  margin-top: 30px;
+  max-height: 400px;
+  display: block;
+  visibility: visible;
+  height: 130px;
+}
+
+.infoWrapper .single {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.single .icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--color-primary);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 6px;
+}
+
+.single a {
+  padding: 8px 8px 8px 20px;
+  border-radius: 100px;
+  display: block;
+  background: #f2f3f5;
+  max-width: max-content;
+  margin: auto;
+  font-size: 0.8rem;
+}
+
+.title {
+  text-align: center !important;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .wrapperImg img {
+    width: 100%;
+  }
+
+  .slide a img {
+    width: 100%;
+  }
+}

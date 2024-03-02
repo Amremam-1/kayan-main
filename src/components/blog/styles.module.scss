@@ -1,0 +1,192 @@
+.blog {
+  margin-top: 120px;
+  margin-bottom: 50px;
+}
+@media (max-width: 576px) {
+  .blog {
+    margin-top: 60px;
+  }
+}
+// .blog .container {
+// }
+.blog .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog .top .smTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+.blog .top .title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 61px;
+  color: #0c0a0a;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .blog .top .title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog .top .title {
+    font-size: 24px;
+    line-height: 42px;
+  }
+}
+
+.blog .blogList {
+  margin-top: 10px;
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+.blog .blogList .blogItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0 20px;
+
+  @media (max-width: 595px) {
+    flex-direction: column;
+  }
+  .carousel {
+    flex: 1;
+  }
+}
+
+.blog .blogList .blogItem .image {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+
+  @media (max-width: 595px) {
+    width: 100%;
+  }
+}
+.blog .blogList .blogItem .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1.3s ease-in-out;
+  border-radius: 15px 0;
+}
+.blog .blogList .blogItem .image:hover img {
+  transform: scale(1.1);
+}
+.blog .blogList .blogItem .image .note {
+  position: absolute;
+  padding: 11px 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  background: var(--color-primary);
+  left: 25px;
+  top: 25px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.blog .blogList .blogItem .content {
+  padding: 31px 35px 40px;
+  background: #fff;
+  flex: 1;
+}
+
+.blog .blogList .blogItem .byDate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 17px;
+}
+
+.blog .blogList .blogItem .itemTitle {
+  transition: 0.3s;
+  line-height: 34px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 35px;
+  cursor: pointer;
+  color: #0c0a0a;
+  font-weight: 700;
+  // width: 60%;
+}
+
+.blog .blogList .blogItem .itemTitle:hover {
+  color: var(--color-primary);
+}
+
+.blog .blogList .blogItem .readDetailsBtn {
+  border: none;
+  outline: none;
+  background: var(--secondry);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 20px 33px;
+  line-height: 10px;
+  max-width: max-content;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border-radius: 2px;
+  display: block;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.blog .blogList .blogItem .readDetailsBtn::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--color-primary);
+  transform: translateY(110%);
+  transition: 0.3s;
+  z-index: -1;
+}
+.blog .blogList .blogItem .readDetailsBtn:hover::before {
+  transform: translateY(0);
+}
+
+.display {
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center; /* Optional: Center the videos horizontally */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.video {
+  margin: 10px; /* Adjust margin as needed */
+  width: 100%; /* Optional: Ensure videos don't exceed container width */
+  height: 400px;
+}
