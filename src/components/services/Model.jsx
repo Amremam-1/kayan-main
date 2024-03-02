@@ -11,9 +11,9 @@ const services = [
     id: "one",
     images: [
       "/src/assets/images/Picture48.jpg",
-      "/src/assets/Downloads/Picture143.jpg",
-      "/src/assets/Downloads/Picture144.jpg",
-      "/src/assets/Downloads/Picture152.jpg",
+      "/src/assets/images/Picture143.jpg",
+      "/src/assets/images/Picture144.jpg",
+      "/src/assets/images/Picture152.jpg",
     ],
   },
   {
@@ -22,9 +22,9 @@ const services = [
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     id: "two",
     images: [
-      "/src/assets/Downloads/11.jpg",
-      "/src/assets/Downloads/22.jpg",
-      "/src/assets/Downloads/33.jpg",
+      "/src/assets/images/11.jpg",
+      "/src/assets/images/22.jpg",
+      "/src/assets/images/33.jpg",
     ],
   },
   {
@@ -33,9 +33,9 @@ const services = [
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     id: "three",
     images: [
-      "/src/assets/Downloads/muslam-01.jpg",
-      "/src/assets/Downloads/muslam02.jpg",
-      "/src/assets/Downloads/muslam04.jpg",
+      "/src/assets/images/muslam-01.jpg",
+      "/src/assets/images/muslam02.jpg",
+      "/src/assets/images/muslam04.jpg",
     ],
   },
   {
@@ -55,10 +55,10 @@ const services = [
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
     id: "five",
     images: [
-      "/src/assets/Downloads/مدارس واحة جدة 01  .jpg",
-      "/src/assets/Downloads/مدارس واحة جدة 02  .jpg",
-      "/src/assets/Downloads/مدارس واحة جدة 03  .jpg",
-      "/src/assets/Downloads/مدارس واحة جدة 04  .jpg",
+      "/src/assets/images/مدارس واحة جدة 01  .jpg",
+      "/src/assets/images/مدارس واحة جدة 02  .jpg",
+      "/src/assets/images/مدارس واحة جدة 03  .jpg",
+      "/src/assets/images/مدارس واحة جدة 04  .jpg",
     ],
   },
   {
@@ -66,13 +66,13 @@ const services = [
     discription: "Ensuring longevity and functionality through regular upkeep.",
     id: "six",
     images: [
-      "/src/assets/Downloads/Picture163.jpg",
-      "/src/assets/Downloads/Picture164.png",
-      "/src/assets/Downloads/Picture165.png",
-      "/src/assets/Downloads/Picture166.png",
-      "/src/assets/Downloads/Picture167.png",
-      "/src/assets/Downloads/Picture168.png",
-      "/src/assets/Downloads/Picture169.png",
+      "/src/assets/images/Picture163.jpg",
+      "/src/assets/images/Picture164.png",
+      "/src/assets/images/Picture165.png",
+      "/src/assets/images/Picture166.png",
+      "/src/assets/images/Picture167.png",
+      "/src/assets/images/Picture168.png",
+      "/src/assets/images/Picture169.png",
     ],
   },
 ]
