@@ -23,34 +23,26 @@ const Footer = () => {
               <div className={styles.logo}>
                 <img src={logo} alt="logo" />
               </div>
-              <h2 className={styles.subscTitle}>
-                SUBSCRIBE OUR NEWSLETTER
-                <br />
-                FORLATEST UPDATES
-              </h2>
-              <form className={styles.subscForm}>
-                <input type="email" placeholder="Email Address" />
-                <button>Subscribe</button>
-              </form>
             </div>
             <div className={styles.links}>
               <div className={styles.box}>
                 <h3 className={styles.fTitle}>ABOUT COMPANY</h3>
                 <p className={styles.fText}>
-                  Centric aplications productize before front end vortals
-                  visualize front end is results and value added
+                  Dedication, professionalism, honesty, fairness in all
+                  interactions, ensuring integrity, trust, and transparency in
+                  relationships.
                 </p>
                 <div className={styles.social}>
-                  <a href="/">
+                  <a href="#">
                     <FaFacebookF />
                   </a>
-                  <a href="/">
+                  <a href="#">
                     <FaTwitter />
                   </a>
-                  <a href="/">
+                  <a href="#">
                     <FaYoutube />
                   </a>
-                  <a href="/">
+                  <a href="#">
                     <FaLinkedinIn />
                   </a>
                 </div>
@@ -60,31 +52,25 @@ const Footer = () => {
                   <h3 className={styles.fTitle}>USEFUL LINKS</h3>
                   <ul className={styles.fList}>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#about">
                         <TbArrowBigRightFilled />
-                        <span id="about">About Us</span>
+                        <span>About Us</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
-                        <TbArrowBigRightFilled />
-                        <span> Our Gallery</span>
-                      </a>
-                    </li>
-                    <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#service">
                         <TbArrowBigRightFilled />
                         <span>Our Services</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#portfolio">
                         <TbArrowBigRightFilled />
                         <span>Our Team</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#contact">
                         <TbArrowBigRightFilled />
                         <span>Contact Us</span>
                       </a>
@@ -95,7 +81,7 @@ const Footer = () => {
                   <h3 className={styles.fTitle}>CONTACT US</h3>
                   <ul className={styles.fList}>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#">
                         <div className={styles.icon}>
                           <FaPhoneAlt />
                         </div>
@@ -103,7 +89,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#">
                         <div className={styles.icon}>
                           <FaPhoneAlt />
                         </div>
@@ -111,7 +97,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#">
                         <div className={styles.icon}>
                           <HiOutlineMail />
                         </div>
@@ -119,7 +105,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className={styles.fItem}>
-                      <a href="/">
+                      <a href="#">
                         <div className={styles.icon}>
                           <FaLocationDot />
                         </div>

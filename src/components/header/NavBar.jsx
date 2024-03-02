@@ -9,15 +9,15 @@ import SideBar from "../sideBar/SideBar"
 import logo from "../../assets/images/logo2.jpg"
 const nav_Links = [
   {
-    path: "#",
+    path: "#portfolio",
     display: "Careers",
   },
   {
-    path: "#",
+    path: "#service",
     display: "News & Media",
   },
   {
-    path: "#",
+    path: "#contact",
     display: "Contact",
   },
 ]
@@ -64,8 +64,12 @@ const NavBar = () => {
                   <div className={styles.right}>
                     <ul className={styles.menu}>
                       {nav_Links.map((item, index) => (
-                        <li className={styles.nav_item} key={index}>
-                          {item.display}
+                        <li
+                          className={styles.nav_item}
+                          key={index}
+                          href={`#${item.path}`}
+                        >
+                          <a href={item.path}>{item.display}</a>
                         </li>
                       ))}
                     </ul>
