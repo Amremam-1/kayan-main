@@ -1,11 +1,11 @@
 import styles from "./style/styles.module.scss"
 import { Container, Row, Col } from "react-bootstrap"
-import service01 from "../../assets/images/service01.jpg"
-import service02 from "../../assets/images/service02.png"
-import service03 from "../../assets/images/service03.png"
-import service04 from "../../assets/images/service04.jpg"
-import service05 from "../../assets/images/Picture168.png"
-import service06 from "../../assets/images/service06.jpg"
+import service01 from "../../../public/assets/images/service01.jpg"
+import service02 from "../../../public/assets/images/service02.png"
+import service03 from "../../../public/assets/images/service03.png"
+import service04 from "../../../public/assets/images/service04.jpg"
+import service05 from "../../../public/assets/images/Picture168.png"
+import service06 from "../../../public/assets/images/service06.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -21,10 +21,9 @@ const servicesItems = [
     content: "01",
     id: "one",
     images: [
-      "/src/assets/images/Picture48.jpg",
-      "/src/assets/images/Picture143.jpg",
-      "/src/assets/images/Picture144.jpg",
-      "/src/assets/images/Picture152.jpg",
+      "/public/assets/images/Picture143.jpg",
+      "/public/assets/images/Picture144.jpg",
+      "/public/assets/images/Picture152.jpg",
     ],
   },
   {
@@ -35,9 +34,9 @@ const servicesItems = [
     content: "02",
     id: "two",
     images: [
-      "/src/assets/images/11.jpg",
-      "/src/assets/images/22.jpg",
-      "/src/assets/images/33.jpg",
+      "/public/assets/images/11.jpg",
+      "/public/assets/images/22.jpg",
+      "/public/assets/images/33.jpg",
     ],
   },
   {
@@ -48,9 +47,9 @@ const servicesItems = [
     content: "03",
     id: "three",
     images: [
-      "/src/assets/images/muslam-01.jpg",
-      "/src/assets/images/muslam02.jpg",
-      "/src/assets/images/muslam04.jpg",
+      "/public/assets/images/muslam-01.jpg",
+      "/public/assets/images/muslam02.jpg",
+      "/public/assets/images/muslam04.jpg",
     ],
   },
   {
@@ -61,9 +60,9 @@ const servicesItems = [
     content: "04",
     id: "four",
     images: [
-      "/src/assets/images/شعله (1).jpg",
-      "/src/assets/images/شعله (2).jpg",
-      "/src/assets/images/شعله (3).jpg",
+      "/public/assets/images/شعله (1).jpg",
+      "/public/assets/images/شعله (2).jpg",
+      "/public/assets/images/شعله (3).jpg",
     ],
   },
   {
@@ -74,10 +73,10 @@ const servicesItems = [
     content: "05",
     id: "five",
     images: [
-      "/src/assets/images/مدارس واحة جدة 01  .jpg",
-      "/src/assets/images/مدارس واحة جدة 02  .jpg",
-      "/src/assets/images/مدارس واحة جدة 03  .jpg",
-      "/src/assets/images/مدارس واحة جدة 04  .jpg",
+      "/public/assets/images/مدارس واحة جدة 01  .jpg",
+      "/public/assets/images/مدارس واحة جدة 02  .jpg",
+      "/public/assets/images/مدارس واحة جدة 03  .jpg",
+      "/public/assets/images/مدارس واحة جدة 04  .jpg",
     ],
   },
   {
@@ -87,13 +86,13 @@ const servicesItems = [
     content: "06",
     id: "six",
     images: [
-      "/src/assets/images/Picture163.jpg",
-      "/src/assets/images/Picture164.png",
-      "/src/assets/images/Picture165.png",
-      "/src/assets/images/Picture166.png",
-      "/src/assets/images/Picture167.png",
-      "/src/assets/images/Picture168.png",
-      "/src/assets/images/Picture169.png",
+      "/public/assets/images/Picture163.jpg",
+      "/public/assets/images/Picture164.png",
+      "/public/assets/images/Picture165.png",
+      "/public/assets/images/Picture166.png",
+      "/public/assets/images/Picture167.png",
+      "/public/assets/images/Picture168.png",
+      "/public/assets/images/Picture169.png",
     ],
   },
 ]

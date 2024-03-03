@@ -6,7 +6,7 @@ import styles from "./styles.module.scss"
 import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import SideBar from "../sideBar/SideBar"
-import logo from "../../assets/images/logo2.jpg"
+import logo from "../../../public/assets/images/logo2.jpg"
 const nav_Links = [
   {
     path: "#portfolio",

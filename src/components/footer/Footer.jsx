@@ -9,7 +9,7 @@ import { TbArrowBigRightFilled } from "react-icons/tb"
 import { HiOutlineMail } from "react-icons/hi"
 import { FaLocationDot } from "react-icons/fa6"
 import { Container, Row } from "react-bootstrap"
-import logo from "../../assets/images/logo2.jpg"
+import logo from "../../../public/assets/images/logo2.jpg"
 
 import styles from "./styles.module.scss"
 

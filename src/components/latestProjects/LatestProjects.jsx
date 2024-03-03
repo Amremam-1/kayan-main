@@ -1,9 +1,9 @@
 import { PiPlusBold } from "react-icons/pi"
 import { Container, Row } from "react-bootstrap"
-import svg1 from "../../assets/images/01.svg"
-import svg2 from "../../assets/images/03.svg"
-import svg3 from "../../assets/images/04.svg"
-import svg4 from "../../assets/images/05.svg"
+import svg1 from "../../../public/assets/images/01.svg"
+import svg2 from "../../../public/assets/images/03.svg"
+import svg3 from "../../../public/assets/images/04.svg"
+import svg4 from "../../../public/assets/images/05.svg"
 import styles from "./styles.module.scss"
 
 const LatestProjects = () => {
