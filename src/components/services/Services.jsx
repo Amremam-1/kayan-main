@@ -1,11 +1,11 @@
 import styles from "./style/styles.module.scss"
 import { Container, Row, Col } from "react-bootstrap"
-import service01 from "../../../public/assets/images/service01.jpg"
-import service02 from "../../../public/assets/images/service02.png"
-import service03 from "../../../public/assets/images/service03.png"
-import service04 from "../../../public/assets/images/service04.jpg"
-import service05 from "../../../public/assets/images/Picture168.png"
-import service06 from "../../../public/assets/images/service06.jpg"
+// import service01 from "../../../public/assets/images/service01.jpg"
+// import service02 from "../../../public/assets/images/service02.png"
+// import service03 from "../../../public/assets/images/service03.png"
+// import service04 from "../../../public/assets/images/service04.jpg"
+// import service05 from "../../../public/assets/images/Picture168.png"
+// import service06 from "../../../public/assets/images/service06.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -14,7 +14,7 @@ import { Pagination, Autoplay } from "swiper/modules"
 
 const servicesItems = [
   {
-    image: service01,
+    // image: service01,
     title: "CONSTRUCTION & CONSULTANCY",
     discription:
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
@@ -27,7 +27,7 @@ const servicesItems = [
     ],
   },
   {
-    image: service02,
+    // image: service02,
     title: "INTERIOR  & EXTERIOR",
     discription:
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
@@ -40,7 +40,7 @@ const servicesItems = [
     ],
   },
   {
-    image: service03,
+    // image: service03,
     title: "DECORE & FURNITURE",
     discription:
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
@@ -53,7 +53,7 @@ const servicesItems = [
     ],
   },
   {
-    image: service05,
+    // image: service05,
     title: "LANDSCAPING",
     discription:
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
@@ -66,7 +66,7 @@ const servicesItems = [
     ],
   },
   {
-    image: service04,
+    // image: service04,
     title: "ART WOOD",
     discription:
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
@@ -80,7 +80,7 @@ const servicesItems = [
     ],
   },
   {
-    image: service06,
+    // image: service06,
     title: "BUILDING MAINTENANCE",
     discription: "Ensuring longevity and functionality through regular upkeep.",
     content: "06",
