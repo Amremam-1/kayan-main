@@ -3,10 +3,9 @@ import styles from "./sideBar.module.css"
 import { IoClose } from "react-icons/io5"
 import { FaFacebookF } from "react-icons/fa"
 import { IoLogoTwitter } from "react-icons/io"
-import { FaYoutube } from "react-icons/fa"
-import { FaLinkedinIn } from "react-icons/fa"
 import { useEffect, useState } from "react"
-
+import { FaInstagram } from "react-icons/fa6"
+import { FaSnapchat } from "react-icons/fa6"
 // eslint-disable-next-line react/prop-types
 const SideBar = ({ isOpen }) => {
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -41,23 +40,23 @@ const SideBar = ({ isOpen }) => {
         <div className={styles.social_wrapper_one}>
           <ul>
             <li>
-              <a href="#">
+              <a href="#https://www.facebook.com/profile.php?id=61556560361690">
                 <FaFacebookF className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#https://x.com/kayanegypt_?s=21">
                 <IoLogoTwitter className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#">
-                <FaYoutube className={styles.social_icon} />
+              <a href="#https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
+                <FaInstagram className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#">
-                <FaLinkedinIn className={styles.social_icon} />
+              <a href="#https://t.snapchat.com/DpQEvHuT">
+                <FaSnapchat className={styles.social_icon} />
               </a>
             </li>
           </ul>

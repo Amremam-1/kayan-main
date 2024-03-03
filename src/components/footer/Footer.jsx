@@ -1,11 +1,8 @@
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaPhoneAlt,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa"
+import { FaFacebookF, FaPhoneAlt, FaTwitter } from "react-icons/fa"
 import { TbArrowBigRightFilled } from "react-icons/tb"
+import { FaInstagram } from "react-icons/fa6"
+import { FaSnapchat } from "react-icons/fa6"
+
 import { HiOutlineMail } from "react-icons/hi"
 import { FaLocationDot } from "react-icons/fa6"
 import { Container, Row } from "react-bootstrap"
@@ -33,17 +30,17 @@ const Footer = () => {
                   relationships.
                 </p>
                 <div className={styles.social}>
-                  <a href="#">
+                  <a href="#https://www.facebook.com/profile.php?id=61556560361690">
                     <FaFacebookF />
                   </a>
-                  <a href="#">
+                  <a href="#https://x.com/kayanegypt_?s=21">
                     <FaTwitter />
                   </a>
-                  <a href="#">
-                    <FaYoutube />
+                  <a href="#https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
+                    <FaInstagram />
                   </a>
-                  <a href="#">
-                    <FaLinkedinIn />
+                  <a href="#https://t.snapchat.com/DpQEvHuT">
+                    <FaSnapchat />
                   </a>
                 </div>
               </div>
