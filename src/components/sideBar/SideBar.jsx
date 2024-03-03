@@ -40,22 +40,22 @@ const SideBar = ({ isOpen }) => {
         <div className={styles.social_wrapper_one}>
           <ul>
             <li>
-              <a href="#https://www.facebook.com/profile.php?id=61556560361690">
+              <a href="https://www.facebook.com/profile.php?id=61556560361690">
                 <FaFacebookF className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#https://x.com/kayanegypt_?s=21">
+              <a href="https://x.com/kayanegypt_?s=21">
                 <IoLogoTwitter className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
+              <a href="https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
                 <FaInstagram className={styles.social_icon} />
               </a>
             </li>
             <li>
-              <a href="#https://t.snapchat.com/DpQEvHuT">
+              <a href="https://t.snapchat.com/DpQEvHuT">
                 <FaSnapchat className={styles.social_icon} />
               </a>
             </li>

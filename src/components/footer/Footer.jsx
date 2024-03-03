@@ -30,16 +30,16 @@ const Footer = () => {
                   relationships.
                 </p>
                 <div className={styles.social}>
-                  <a href="#https://www.facebook.com/profile.php?id=61556560361690">
+                  <a href="https://www.facebook.com/profile.php?id=61556560361690">
                     <FaFacebookF />
                   </a>
-                  <a href="#https://x.com/kayanegypt_?s=21">
+                  <a href="https://x.com/kayanegypt_?s=21">
                     <FaTwitter />
                   </a>
-                  <a href="#https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
+                  <a href="https://www.instagram.com/egyptkayan05?igsh=MjhzN3YyZDI2anpj">
                     <FaInstagram />
                   </a>
-                  <a href="#https://t.snapchat.com/DpQEvHuT">
+                  <a href="https://t.snapchat.com/DpQEvHuT">
                     <FaSnapchat />
                   </a>
                 </div>
