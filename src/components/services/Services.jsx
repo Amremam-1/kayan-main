@@ -21,9 +21,9 @@ const servicesItems = [
     content: "01",
     id: "one",
     images: [
-      "/public/assets/images/Picture143.jpg",
-      "/public/assets/images/Picture144.jpg",
-      "/public/assets/images/Picture152.jpg",
+      "/assets/images/Picture143.jpg",
+      "/assets/images/Picture144.jpg",
+      "/assets/images/Picture152.jpg",
     ],
   },
   {
@@ -34,9 +34,9 @@ const servicesItems = [
     content: "02",
     id: "two",
     images: [
-      "/public/assets/images/11.jpg",
-      "/public/assets/images/22.jpg",
-      "/public/assets/images/33.jpg",
+      "/assets/images/11.jpg",
+      "/assets/images/22.jpg",
+      "/assets/images/33.jpg",
     ],
   },
   {
@@ -47,9 +47,9 @@ const servicesItems = [
     content: "03",
     id: "three",
     images: [
-      "/public/assets/images/muslam-01.jpg",
-      "/public/assets/images/muslam02.jpg",
-      "/public/assets/images/muslam04.jpg",
+      "/assets/images/muslam-01.jpg",
+      "/assets/images/muslam02.jpg",
+      "/assets/images/muslam04.jpg",
     ],
   },
   {
@@ -60,9 +60,9 @@ const servicesItems = [
     content: "04",
     id: "four",
     images: [
-      "/public/assets/images/شعله (1).jpg",
-      "/public/assets/images/شعله (2).jpg",
-      "/public/assets/images/شعله (3).jpg",
+      "/assets/images/شعله (1).jpg",
+      "/assets/images/شعله (2).jpg",
+      "/assets/images/شعله (3).jpg",
     ],
   },
   {
@@ -73,10 +73,10 @@ const servicesItems = [
     content: "05",
     id: "five",
     images: [
-      "/public/assets/images/مدارس واحة جدة 01  .jpg",
-      "/public/assets/images/مدارس واحة جدة 02  .jpg",
-      "/public/assets/images/مدارس واحة جدة 03  .jpg",
-      "/public/assets/images/مدارس واحة جدة 04  .jpg",
+      "/assets/images/مدارس واحة جدة 01  .jpg",
+      "/assets/images/مدارس واحة جدة 02  .jpg",
+      "/assets/images/مدارس واحة جدة 03  .jpg",
+      "/assets/images/مدارس واحة جدة 04  .jpg",
     ],
   },
   {
@@ -86,13 +86,13 @@ const servicesItems = [
     content: "06",
     id: "six",
     images: [
-      "/public/assets/images/Picture163.jpg",
-      "/public/assets/images/Picture164.png",
-      "/public/assets/images/Picture165.png",
-      "/public/assets/images/Picture166.png",
-      "/public/assets/images/Picture167.png",
-      "/public/assets/images/Picture168.png",
-      "/public/assets/images/Picture169.png",
+      "/assets/images/Picture163.jpg",
+      "/assets/images/Picture164.png",
+      "/assets/images/Picture165.png",
+      "/assets/images/Picture166.png",
+      "/assets/images/Picture167.png",
+      "/assets/images/Picture168.png",
+      "/assets/images/Picture169.png",
     ],
   },
 ]
@@ -117,22 +117,22 @@ const Services = () => {
             modules={[Pagination]}
             breakpoints={{
               2560: {
-                slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 3,
               },
               1440: {
-                slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 3,
               },
               768: {
-                slidesPerView: 2, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 2,
               },
               480: {
-                slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 1,
               },
               320: {
-                slidesPerView: 1, // Set the number of slides to 1 for screens larger than 768 pixels
+                slidesPerView: 1,
               },
             }}
           >
