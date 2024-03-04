@@ -8,9 +8,17 @@ import { useState } from "react"
 const Blog = () => {
   const [showFullText, setShowFullText] = useState(false)
 
+  const [userInteracted, setUserInteracted] = useState(false)
+
   const toggleTextDisplay = () => {
     setShowFullText(!showFullText)
   }
+
+  // eslint-disable-next-line no-unused-vars
+  const handleCarouselSelect = (selectedIndex, e) => {
+    setUserInteracted(true)
+  }
+
   return (
     <section className={styles.blog} id="blog">
       <div className={styles.container}>
@@ -20,7 +28,11 @@ const Blog = () => {
         </div>
         <ul className={styles.blogList}>
           <li className={styles.blogItem}>
-            <Carousel className={styles.carousel}>
+            <Carousel
+              className={styles.carousel}
+              onSelect={handleCarouselSelect}
+              interval={!userInteracted ? 50000 : null}
+            >
               <Carousel.Item>
                 <div className={styles.image}>
                   <img src={Picture4} alt="blog" />

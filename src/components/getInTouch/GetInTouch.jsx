@@ -9,9 +9,17 @@ const GetInTouch = () => {
         <div className={styles.map}>
           {/* <MapComponent2 /> */}
           {/* <MapComponent /> */}
-          <div style={{width: '100%'}}><iframe width="100%" height="600"  src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Ghosn%20Al%20Salam,%20Al-Ruwais,%20Jeddah.+(Kayan)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps vehicle tracker</a></iframe></div>
+          <div style={{ width: "100%" }}>
+            <iframe
+              width="100%"
+              height="600"
+              src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Ghosn%20Al%20Salam,%20Al-Ruwais,%20Jeddah.+(Kayan)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            >
+              <a href="https://www.gps.ie/">gps vehicle tracker</a>
+            </iframe>
+          </div>
         </div>
-        <div className={styles.message}>
+        {/* <div className={styles.message}>
           <div className={styles.top}>
             <p className={styles.text}>Get In Touch</p>
             <h2 className={styles.title}>Let’s Get in Touch</h2>
@@ -35,7 +43,7 @@ const GetInTouch = () => {
             <textarea placeholder="Your message Here" />
             <button className={styles.submitButton}>Submit Message</button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   )
