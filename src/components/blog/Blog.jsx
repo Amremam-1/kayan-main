@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa6"
 import styles from "./styles.module.scss"
 import Picture4 from "../../../public/assets/images/ceo.jpg"
 import video01 from "../../../public/assets/images/tkman.mp4"
-import video02 from "../../../public/assets/images/تمكين.mp4"
+import video02 from "../../../public/assets/images/تمكين.mp4ىحة"
 import Carousel from "react-bootstrap/Carousel"
 import { useState } from "react"
 const Blog = () => {
