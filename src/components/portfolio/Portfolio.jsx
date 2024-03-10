@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import { AiOutlineMail } from "react-icons/ai"
+import { FiPhoneCall } from "react-icons/fi"
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import port1 from "../../../public/assets/images/project-01.jpg"
@@ -33,49 +35,49 @@ const persons = [
     img: person01,
     name: "Walaa Zain Alabdin",
     desig: "Architectural Engineer",
-    email: "walaa@kayanegypt.net",
-    phone: "0569056148",
+    // email: "walaa@kayanegypt.net",
+    // phone: "0569056148",
     id: "070",
   },
   {
     img: person,
     name: "Yahya Moustafa Allam",
     desig: "Civil Engineer",
-    email: "yehia@kayanegypt.net",
-    phone: "0530331300",
+    // email: "yehia@kayanegypt.net",
+    // phone: "0530331300",
     id: "080",
   },
   {
     img: person,
     name: "Mazen Hosny",
     desig: "Project Manager",
-    email: "Mazen@kayanegypt.net",
-    phone: "+966560453344",
+    // email: "Mazen@kayanegypt.net",
+    // phone: "+966560453344",
     id: "090",
   },
   {
     img: person,
     name: "Mohamed Gomaa",
     desig: "Chief Financial Officer",
-    email: "M.Gomaa@kayanegypt.com",
-    phone: "056 905 3968",
-    id: "090",
+    // email: "M.Gomaa@kayanegypt.com",
+    // phone: "056 905 3968",
+    id: "010",
   },
   {
     img: person,
     name: "Mohamed Asaad Sami",
     desig: "Architect",
-    email: "M.Asaad@kayanegypt.net",
-    phone: "056 905 4337",
-    id: "090",
+    // email: "M.Asaad@kayanegypt.net",
+    // phone: "056 905 4337",
+    id: "011",
   },
   {
     img: person,
-    name: "MAHFOUZ SALIM",
+    name: "Mahfouz Salim",
     desig: "Architectural Engineer",
-    email: "Mahfouz@kayanegypt.net",
-    phone: "0598647764",
-    id: "090",
+    // email: "Mahfouz@kayanegypt.net",
+    // phone: "0598647764",
+    id: "012",
   },
   {
     img: person,
@@ -83,7 +85,7 @@ const persons = [
     desig: "construction  Supervisor",
     email: "",
     phone: "",
-    id: "090",
+    id: "013",
   },
   {
     img: person,
@@ -91,7 +93,7 @@ const persons = [
     desig: "Construction supervisor",
     email: "",
     phone: "",
-    id: "090",
+    id: "014",
   },
   {
     img: person,
@@ -99,7 +101,7 @@ const persons = [
     desig: "construction  Supervisor",
     email: "",
     phone: "",
-    id: "090",
+    id: "015",
   },
   {
     img: person,
@@ -107,14 +109,14 @@ const persons = [
     desig: "HVAC  supervisor",
     email: "",
     phone: "",
-    id: "090",
+    id: "016",
   },
 ]
 
 const images = [
   {
     img: port1,
-    id: "01",
+    id: "1",
     title: "معارض تمكين للأجهزة المنزلية ",
     span: "فرع الأمير سلطان",
   },
@@ -125,55 +127,55 @@ const images = [
   { img: port6, id: "06", title: "تصميم داخلي إداري" },
   {
     img: port7,
-    id: "07",
+    id: "2",
     title: "معارض تمكين للأجهزة المنزلية ",
     span: "فرع الأمير سلطان",
   },
   {
     img: port8,
-    id: "08",
+    id: "3",
     title: "معارض تمكين للأجهزة المنزلية ",
     span: "فرع الأمير سلطان",
   },
   {
     img: port9,
-    id: "09",
+    id: "4",
     title: "معارض تمكين للأجهزة المنزلية ",
     span: "فرع الأمير سلطان",
   },
   {
     img: port10,
-    id: "010",
+    id: "5",
     title: "مدارس واحة جدة",
   },
   {
     img: port11,
-    id: "011",
+    id: "6",
     title: "مدارس واحة جدة ",
   },
   {
     img: port12,
-    id: "012",
+    id: "8",
     title: "مدارس واحة جدة ",
   },
   {
     img: port13,
-    id: "013",
+    id: "9",
     title: "مدارس واحة جدة ",
   },
   {
     img: port14,
-    id: "013",
+    id: "10",
     title: "مركز الشعلة",
   },
   {
     img: port15,
-    id: "013",
+    id: "11",
     title: "مركز الشعلة",
   },
   {
     img: port16,
-    id: "013",
+    id: "12",
     title: "مركز الشعلة",
   },
 ]
@@ -305,7 +307,7 @@ const Portfolio = () => {
 
                           <span className={styles.desig}>{person.desig}</span>
 
-                          {/* <div className={styles.infoWrapper}>
+                          <div className={styles.infoWrapper}>
                             <div className={styles.single}>
                               <AiOutlineMail className={styles.icon} />
 
@@ -317,7 +319,7 @@ const Portfolio = () => {
 
                               <a href="#">{person?.phone}</a>
                             </div>
-                          </div> */}
+                          </div>
                         </div>
                       </div>
                     </div>
