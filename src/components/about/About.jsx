@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
 import styles from "./styles.module.scss"
-import service04 from "../../../public/assets/images/ser4.jpg"
+import service04 from "../../../public/assets/images/ser45.jpg"
 import { FaArrowRight } from "react-icons/fa"
 import { FaArrowDown } from "react-icons/fa"
 import { useState } from "react"

@@ -103,7 +103,7 @@ const Footer = () => {
                     </li>
                     <li className={styles.fItem}>
                       <a href="#">
-                        <div className={styles.icon}>
+                        <div className={styles.icon}> 
                           <FaLocationDot />
                         </div>
                         <span>

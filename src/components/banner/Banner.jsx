@@ -2,24 +2,23 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import { Autoplay, Navigation } from "swiper/modules"
-import banner01 from "../../../public/assets/images/landscape.jpg"
-import banner02 from "../../../public/assets/images/landscape.jpg"
-import banner03 from "../../../public/assets/images/landscape.jpg"
+// import banner01 from "../../../public/assets/images/landscape.jpg"
+// import banner02 from "../../../public/assets/images/landscape1.jpg"
+import banner03 from "../../../public/assets/images/landscape2.jpg"
 import styles from "./banner.module.scss"
-import { BiSolidPhoneCall } from "react-icons/bi"
 import { IoMdArrowRoundUp } from "react-icons/io"
 import { useState, useEffect } from "react"
 
 const images = [
   {
-    image: banner01,
+    image: banner03,
     title: "Welcome You To Kayan Egypt",
     about1: "Delivering top-notch",
     about2: "construction services",
     about3: "products",
   },
   {
-    image: banner02,
+    image: banner03,
     title: "Welcome You To Kayan Egypt",
     about1: "providing useful",
     about2: "significant products",
@@ -93,14 +92,6 @@ const Banner = () => {
                   <a href="#service" className={styles.btn}>
                     GET STARTED
                   </a>
-
-                  <div className={styles.singleComponent}>
-                    <BiSolidPhoneCall className={styles.icon} />
-                    <div className={styles.info}>
-                      <span>Call Us Now</span>
-                      <a href="#">+ 966 545831834</a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
