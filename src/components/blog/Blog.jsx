@@ -66,7 +66,6 @@ const Blog = () => {
             <div className={styles.content}>
               <div className={styles.byDate}>
                 <p className={styles.by}>By Hosni Chalabi</p>
-                <p className={styles.date}>03 January, 2023</p>
               </div>
               <h3 className={styles.itemTitle}>
                 {showFullText
