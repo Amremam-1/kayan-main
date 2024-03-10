@@ -1,12 +1,5 @@
 import styles from "./style/styles.module.scss"
 import { Container, Row, Col } from "react-bootstrap"
-// import service01 from "../../../public/assets/images/service01.jpg"
-// import service02 from "../../../public/assets/images/service02.png"
-// import service03 from "../../../public/assets/images/service03.png"
-// import service04 from "../../../public/assets/images/service04.jpg"
-// import service05 from "../../../public/assets/images/Picture168.png"
-// import service06 from "../../../public/assets/images/service06.jpg"
-
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
@@ -14,8 +7,7 @@ import { Pagination, Autoplay } from "swiper/modules"
 
 const servicesItems = [
   {
-    // image: service01,
-    title: "CONSTRUCTION & CONSULTANCY",
+    title: "CONSTRUCTION",
     discription:
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
     content: "01",
@@ -27,8 +19,7 @@ const servicesItems = [
     ],
   },
   {
-    // image: service02,
-    title: "INTERIOR  & EXTERIOR",
+    title: "INTERIOR",
     discription:
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     content: "02",
@@ -40,8 +31,7 @@ const servicesItems = [
     ],
   },
   {
-    // image: service03,
-    title: "DECORE & FURNITURE",
+    title: "DECORE",
     discription:
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     content: "03",
@@ -53,7 +43,6 @@ const servicesItems = [
     ],
   },
   {
-    // image: service05,
     title: "LANDSCAPING",
     discription:
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
@@ -66,7 +55,6 @@ const servicesItems = [
     ],
   },
   {
-    // image: service04,
     title: "ART WOOD",
     discription:
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
@@ -80,20 +68,11 @@ const servicesItems = [
     ],
   },
   {
-    // image: service06,
     title: "BUILDING MAINTENANCE",
     discription: "Ensuring longevity and functionality through regular upkeep.",
     content: "06",
     id: "six",
-    images: [
-      "/assets/images/Picture163.jpg",
-      "/assets/images/Picture164.png",
-      "/assets/images/Picture165.png",
-      "/assets/images/Picture166.png",
-      "/assets/images/Picture167.png",
-      "/assets/images/Picture168.png",
-      "/assets/images/Picture169.png",
-    ],
+    images: ["/assets/images/Picture166.png"],
   },
 ]
 
