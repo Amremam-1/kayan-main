@@ -144,12 +144,12 @@ const Services = () => {
                     slidesPerView={1}
                     loop={true}
                     autoplay={{
-                      delay: 4000,
+                      delay: 10000,
                       disableOnInteraction: false,
                     }}
                     pagination={true}
                     initialSlide={0}
-                    touch={true} // تمكين التحكم باللمس
+                    touch={true}
                     style={{ width: "100%", height: "300px" }}
                     modules={[Pagination, Autoplay]}
                   >
