@@ -1,5 +1,5 @@
 import { Col, Container, NavLink, Row } from "react-bootstrap"
-import { MdElectricBolt } from "react-icons/md"
+
 import { MdOutlineEmail } from "react-icons/md"
 import { IoLocationOutline } from "react-icons/io5"
 import styles from "./styles.module.scss"
@@ -7,20 +7,6 @@ import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import SideBar from "../sideBar/SideBar"
 import logo from "../../../public/assets/images/logo2.jpg"
-const nav_Links = [
-  {
-    path: "#portfolio",
-    display: "Careers",
-  },
-  {
-    path: "#service",
-    display: "News & Media",
-  },
-  {
-    path: "#contact",
-    display: "Contact",
-  },
-]
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links = [
@@ -67,40 +53,6 @@ const NavBar = () => {
   return (
     <>
       <header className={styles.header_one}>
-        <div className={styles.header_top}>
-          <Container>
-            <Row>
-              <Col lg="12">
-                <div className={styles.header_top_wrapper}>
-                  <div className={styles.left}>
-                    <div className={styles.icon}>
-                      <MdElectricBolt
-                        color="#FF6600"
-                        size="20px"
-                        className="ms-3"
-                      />
-                      <p>Express delivery and free returns within 24 hours</p>
-                    </div>
-                  </div>
-                  <div className={styles.right}>
-                    <ul className={styles.menu}>
-                      {nav_Links.map((item, index) => (
-                        <li
-                          className={styles.nav_item}
-                          key={index}
-                          href={`#${item.path}`}
-                        >
-                          <a href={item.path}>{item.display}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
         <div className={styles.header_mid}>
           <Container>
             <Row>
@@ -108,6 +60,17 @@ const NavBar = () => {
                 <div className={styles.header_mid_one_wrapper}>
                   <div className={styles.logo_area}>
                     <img src={logo} alt="" />
+
+                    <div>
+                      <h3>Kayan Egypt</h3>
+                      <span>Building , Construction</span>
+
+                      <p>
+                        C.R: <span className={styles.num}>4030423834</span>
+                      </p>
+
+                      <p>K.S.A. JADDAH</p>
+                    </div>
                   </div>
 
                   <div className={styles.header_right}>

@@ -90,17 +90,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 20px 0;
 
     .logo_area {
-      width: 80px;
       height: auto;
-
+      
+      display: flex;
+      align-items: center;
       img {
-        width: 100%;
+        width: 80px;
         height: 100%;
         object-fit: cover;
         cursor: pointer;
+        margin-right: 20px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        // gap: 5px;
+        color: #fff;
+
+        h3 {
+          font-size: 17px;
+          letter-spacing: 3px;
+          color: #fff;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-size: 15px;
+          color: #fff;
+        }
+
+        p {
+          .num {
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-left: 6px;
+          }
+        }
       }
     }
 
@@ -173,7 +204,7 @@
 .sticky {
   position: fixed;
   top: 0;
-  display: block;
+  // display: block;
   backdrop-filter: blur(9px);
   width: 100%;
   box-shadow: 0px 7px 18px #1810100d;
@@ -191,7 +222,7 @@
   background: var(--color-primary);
   height: 65px;
   width: 100%;
-  top: 3px;
+  top: 0;
 }
 
 .wrapper {
