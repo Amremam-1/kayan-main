@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-
+import { AiOutlineMail } from "react-icons/ai"
+import { FiPhoneCall } from "react-icons/fi"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import port1 from "../../../public/assets/images/project-01.jpg"
 import port2 from "../../../public/assets/images/tamees-01.jpg"
@@ -64,7 +65,7 @@ const persons = [
   {
     img: person,
     name: "Mohamed Asaad Sami",
-    desig: "Architect",
+    desig: "Architectural Engineer",
     // email: "M.Asaad@kayanegypt.net",
     // phone: "056 905 4337",
     id: "011",
@@ -77,10 +78,11 @@ const persons = [
     // phone: "0598647764",
     id: "012",
   },
+
   {
     img: person,
     name: "Ali Zafaran",
-    desig: "construction  Supervisor",
+    desig: "Construction  Supervisor",
     email: "",
     phone: "",
     id: "013",
@@ -88,7 +90,7 @@ const persons = [
   {
     img: person,
     name: "Ahmad Abd Albaseer",
-    desig: "Construction supervisor",
+    desig: "Construction Supervisor",
     email: "",
     phone: "",
     id: "014",
@@ -96,7 +98,7 @@ const persons = [
   {
     img: person,
     name: "Saber Ibraheem",
-    desig: "construction  Supervisor",
+    desig: "Construction  Supervisor",
     email: "",
     phone: "",
     id: "015",
@@ -309,8 +311,8 @@ const Portfolio = () => {
 
                           <span className={styles.desig}>{person.desig}</span>
 
-                          {/* <div className={styles.infoWrapper}>
-                             <div className={styles.single}>
+                          <div className={styles.infoWrapper}>
+                            <div className={styles.single}>
                               <AiOutlineMail className={styles.icon} />
 
                               <a href="#">{person?.email}</a>
@@ -320,8 +322,8 @@ const Portfolio = () => {
                               <FiPhoneCall className={styles.icon} />
 
                               <a href="#">{person?.phone}</a>
-                            </div> 
-                          </div> */}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

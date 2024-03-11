@@ -12,11 +12,11 @@ const servicesItems = [
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
     content: "01",
     id: "one",
-    images: [
-      "/assets/images/Picture143.jpg",
-      "/assets/images/Picture144.jpg",
-      "/assets/images/Picture152.jpg",
-    ],
+    // images: [
+    //   "/assets/images/Picture143.jpg",
+    //   "/assets/images/Picture144.jpg",
+    //   "/assets/images/Picture152.jpg",
+    // ],
   },
   {
     title: "INTERIOR",
@@ -24,11 +24,11 @@ const servicesItems = [
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     content: "02",
     id: "two",
-    images: [
-      "/assets/images/11.jpg",
-      "/assets/images/22.jpg",
-      "/assets/images/33.jpg",
-    ],
+    // images: [
+    //   "/assets/images/11.jpg",
+    //   "/assets/images/22.jpg",
+    //   "/assets/images/33.jpg",
+    // ],
   },
   {
     title: "DECORE",
@@ -36,11 +36,11 @@ const servicesItems = [
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     content: "03",
     id: "three",
-    images: [
-      "/assets/images/muslam-01.jpg",
-      "/assets/images/muslam02.jpg",
-      "/assets/images/muslam04.jpg",
-    ],
+    // images: [
+    //   "/assets/images/muslam-01.jpg",
+    //   "/assets/images/muslam02.jpg",
+    //   "/assets/images/muslam04.jpg",
+    // ],
   },
   {
     title: "LANDSCAPING",
@@ -48,11 +48,11 @@ const servicesItems = [
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
     content: "04",
     id: "four",
-    images: [
-      "/assets/images/شعله (1).jpg",
-      "/assets/images/شعله (2).jpg",
-      "/assets/images/شعله (3).jpg",
-    ],
+    // images: [
+    //   "/assets/images/شعله (1).jpg",
+    //   "/assets/images/شعله (2).jpg",
+    //   "/assets/images/شعله (3).jpg",
+    // ],
   },
   {
     title: "ART WOOD",
@@ -60,19 +60,19 @@ const servicesItems = [
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
     content: "05",
     id: "five",
-    images: [
-      "/assets/images/مدارس واحة جدة 01  .jpg",
-      "/assets/images/مدارس واحة جدة 02  .jpg",
-      "/assets/images/مدارس واحة جدة 03  .jpg",
-      "/assets/images/مدارس واحة جدة 04  .jpg",
-    ],
+    // images: [
+    //   "/assets/images/مدارس واحة جدة 01  .jpg",
+    //   "/assets/images/مدارس واحة جدة 02  .jpg",
+    //   "/assets/images/مدارس واحة جدة 03  .jpg",
+    //   "/assets/images/مدارس واحة جدة 04  .jpg",
+    // ],
   },
   {
     title: "BUILDING MAINTENANCE",
     discription: "Ensuring longevity and functionality through regular upkeep.",
     content: "06",
     id: "six",
-    images: ["/assets/images/Picture166.png"],
+    // images: ["/assets/images/Picture166.png"],
   },
 ]
 
@@ -129,10 +129,10 @@ const Services = () => {
                     pagination={true}
                     initialSlide={0}
                     touch={true}
-                    style={{ width: "100%", height: "300px" }}
+                    // style={{ width: "100%", height: "300px" }}
                     modules={[Pagination, Autoplay]}
                   >
-                    {item.images.map((image, index) => (
+                    {/* {item.images.map((image, index) => (
                       <SwiperSlide key={index}>
                         <img
                           src={image}
@@ -145,7 +145,7 @@ const Services = () => {
                           }}
                         />
                       </SwiperSlide>
-                    ))}
+                    ))} */}
                   </Swiper>
                   <div className={styles.serviceItem}>
                     <h5>{item.title}</h5>
