@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { AiOutlineMail } from "react-icons/ai"
-import { FiPhoneCall } from "react-icons/fi"
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import port1 from "../../../public/assets/images/project-01.jpg"
@@ -266,10 +264,14 @@ const Portfolio = () => {
           <Row>
             <Col>
               <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 spaceBetween={30}
                 slidesPerView={3}
                 navigation
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
                 breakpoints={{
                   2560: {
                     slidesPerView: 3, // Set the number of slides to 1 for screens larger than 768 pixels
@@ -307,8 +309,8 @@ const Portfolio = () => {
 
                           <span className={styles.desig}>{person.desig}</span>
 
-                          <div className={styles.infoWrapper}>
-                            <div className={styles.single}>
+                          {/* <div className={styles.infoWrapper}>
+                             <div className={styles.single}>
                               <AiOutlineMail className={styles.icon} />
 
                               <a href="#">{person?.email}</a>
@@ -318,8 +320,8 @@ const Portfolio = () => {
                               <FiPhoneCall className={styles.icon} />
 
                               <a href="#">{person?.phone}</a>
-                            </div>
-                          </div>
+                            </div> 
+                          </div> */}
                         </div>
                       </div>
                     </div>

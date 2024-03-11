@@ -16,9 +16,9 @@
   );
   padding-right: 100px;
   padding-left: 100px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  height: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80px;
   max-width: 100%;
 
   @media (max-width: 682px) {
@@ -40,7 +40,7 @@
       object-fit: cover;
       cursor: pointer;
       margin-right: 20px;
-
+      box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
       @media (max-width: 425px) {
         width: 80px;
         margin-right: 5px;
