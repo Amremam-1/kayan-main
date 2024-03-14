@@ -21,10 +21,10 @@ const LatestProjects = () => {
               </h3>
             </div>
             <ul className={styles.projectsList}>
-              <ProjectItem img={svg1} num={3526} text="Tons Of Customers" />
-              <ProjectItem img={svg2} num={3024} text="Compleated Project" />
+              <ProjectItem img={svg1} num={82} text="Tons Of Customers" />
+              <ProjectItem img={svg2} num={73} text="Compleated Project" />
               <ProjectItem img={svg3} num={325} text="Team Members" />
-              <ProjectItem img={svg4} num={56} text="Upcoming Projects" />
+              <ProjectItem img={svg4} num={9} text="Upcoming Projects" />
             </ul>
           </div>
         </Row>

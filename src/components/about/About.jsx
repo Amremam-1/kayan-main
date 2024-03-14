@@ -43,7 +43,7 @@ const About = () => {
               <div>
                 <div className={styles.left}>
                   <h3 className={styles.titleAnimated}>
-                    <span>3526</span>
+                    <span>73</span>
                   </h3>
 
                   <span className={styles.sub}>STARTED JOURNEY</span>
@@ -80,7 +80,7 @@ const About = () => {
               <div>
                 <div className={styles.left}>
                   <h3 className={styles.titleAnimated}>
-                    <span>2026</span>
+                    <span>73</span>
                   </h3>
 
                   <span className={styles.sub}>STARTED JOURNEY</span>

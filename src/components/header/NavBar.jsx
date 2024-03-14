@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import SideBar from "../sideBar/SideBar"
 import logo from "../../../public/assets/images/logo2.jpg"
+import { MdOutlineLanguage } from "react-icons/md"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links = [
@@ -74,6 +75,16 @@ const NavBar = () => {
               <div className={styles.info}>
                 <span>Send Us Mail</span>
                 <a href="#">Hosny@kayanegypt.net</a>
+              </div>
+            </div>
+
+            <div className={styles.language}>
+              <MdOutlineLanguage className={styles.icon_lang} />
+
+              <div className={styles.select}>
+                <p>العربيه</p>
+                <div className={styles.line}></div>
+                <p>English</p>
               </div>
             </div>
 

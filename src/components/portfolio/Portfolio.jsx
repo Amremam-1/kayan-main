@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { AiOutlineMail } from "react-icons/ai"
-import { FiPhoneCall } from "react-icons/fi"
+// import { AiOutlineMail } from "react-icons/ai"
+// import { FiPhoneCall } from "react-icons/fi"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import port1 from "../../../public/assets/images/project-01.jpg"
 import port2 from "../../../public/assets/images/tamees-01.jpg"
@@ -23,95 +23,95 @@ import port13 from "../../../public/assets/images/مدارس واحة جدة 04 
 import port14 from "../../../public/assets/images/شعله (1).jpg"
 import port15 from "../../../public/assets/images/شعله (2).jpg"
 import port16 from "../../../public/assets/images/شعله (3).jpg"
-import person from "../../../public/assets/images/person-famel (1).jpg"
-import person01 from "../../../public/assets/images/person-male (2).jpg"
+// import person from "../../../public/assets/images/person-famel (1).jpg"
+// import person01 from "../../../public/assets/images/person-male (2).jpg"
 
 import { useState } from "react"
 import LatestProjects from "../latestProjects/LatestProjects"
 
-const persons = [
-  {
-    img: person01,
-    name: "Walaa Zain Alabdin",
-    desig: "Architectural Engineer",
-    // email: "walaa@kayanegypt.net",
-    // phone: "0569056148",
-    id: "070",
-  },
-  {
-    img: person,
-    name: "Yahya Moustafa Allam",
-    desig: "Civil Engineer",
-    // email: "yehia@kayanegypt.net",
-    // phone: "0530331300",
-    id: "080",
-  },
-  {
-    img: person,
-    name: "Mazen Hosny",
-    desig: "Project Manager",
-    // email: "Mazen@kayanegypt.net",
-    // phone: "+966560453344",
-    id: "090",
-  },
-  {
-    img: person,
-    name: "Mohamed Gomaa",
-    desig: "Chief Financial Officer",
-    // email: "M.Gomaa@kayanegypt.com",
-    // phone: "056 905 3968",
-    id: "010",
-  },
-  {
-    img: person,
-    name: "Mohamed Asaad Sami",
-    desig: "Architectural Engineer",
-    // email: "M.Asaad@kayanegypt.net",
-    // phone: "056 905 4337",
-    id: "011",
-  },
-  {
-    img: person,
-    name: "Mahfouz Salim",
-    desig: "Architectural Engineer",
-    // email: "Mahfouz@kayanegypt.net",
-    // phone: "0598647764",
-    id: "012",
-  },
+// const persons = [
+//   {
+//     img: person01,
+//     name: "Walaa Zain Alabdin",
+//     desig: "Architectural Engineer",
+//     // email: "walaa@kayanegypt.net",
+//     // phone: "0569056148",
+//     id: "070",
+//   },
+//   {
+//     img: person,
+//     name: "Yahya Moustafa Allam",
+//     desig: "Civil Engineer",
+//     // email: "yehia@kayanegypt.net",
+//     // phone: "0530331300",
+//     id: "080",
+//   },
+//   {
+//     img: person,
+//     name: "Mazen Hosny",
+//     desig: "Project Manager",
+//     // email: "Mazen@kayanegypt.net",
+//     // phone: "+966560453344",
+//     id: "090",
+//   },
+//   {
+//     img: person,
+//     name: "Mohamed Gomaa",
+//     desig: "Chief Financial Officer",
+//     // email: "M.Gomaa@kayanegypt.com",
+//     // phone: "056 905 3968",
+//     id: "010",
+//   },
+//   {
+//     img: person,
+//     name: "Mohamed Asaad Sami",
+//     desig: "Architectural Engineer",
+//     // email: "M.Asaad@kayanegypt.net",
+//     // phone: "056 905 4337",
+//     id: "011",
+//   },
+//   {
+//     img: person,
+//     name: "Mahfouz Salim",
+//     desig: "Architectural Engineer",
+//     // email: "Mahfouz@kayanegypt.net",
+//     // phone: "0598647764",
+//     id: "012",
+//   },
 
-  {
-    img: person,
-    name: "Ali Zafaran",
-    desig: "Construction  Supervisor",
-    email: "",
-    phone: "",
-    id: "013",
-  },
-  {
-    img: person,
-    name: "Ahmad Abd Albaseer",
-    desig: "Construction Supervisor",
-    email: "",
-    phone: "",
-    id: "014",
-  },
-  {
-    img: person,
-    name: "Saber Ibraheem",
-    desig: "Construction  Supervisor",
-    email: "",
-    phone: "",
-    id: "015",
-  },
-  {
-    img: person,
-    name: "Mahmoud Basuioni",
-    desig: "HVAC  supervisor",
-    email: "",
-    phone: "",
-    id: "016",
-  },
-]
+//   {
+//     img: person,
+//     name: "Ali Zafaran",
+//     desig: "Construction  Supervisor",
+//     email: "",
+//     phone: "",
+//     id: "013",
+//   },
+//   {
+//     img: person,
+//     name: "Ahmad Abd Albaseer",
+//     desig: "Construction Supervisor",
+//     email: "",
+//     phone: "",
+//     id: "014",
+//   },
+//   {
+//     img: person,
+//     name: "Saber Ibraheem",
+//     desig: "Construction  Supervisor",
+//     email: "",
+//     phone: "",
+//     id: "015",
+//   },
+//   {
+//     img: person,
+//     name: "Mahmoud Basuioni",
+//     desig: "HVAC supervisor",
+//     email: "",
+//     phone: "",
+//     id: "016",
+//   },
+// ]
 
 const images = [
   {
@@ -255,7 +255,7 @@ const Portfolio = () => {
       </section>
 
       <section>
-        <Container>
+        {/* <Container>
           <Row>
             <Col lg="12" className={styles.title}>
               <span className="span-title">TECHNICAL EXPART</span>
@@ -332,7 +332,7 @@ const Portfolio = () => {
               </Swiper>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
 
         <LatestProjects />
       </section>
