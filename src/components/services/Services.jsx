@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import { Pagination, Autoplay } from "swiper/modules"
+import { useTranslation } from "react-i18next"
 
 const servicesItems = [
   {
@@ -77,13 +78,14 @@ const servicesItems = [
 ]
 
 const Services = () => {
+  const [t] = useTranslation()
   return (
     <section className={styles.services} id="service">
       <Container className={styles.services_container}>
         <Row>
           <Col lg="12" className="text-center p-5">
-            <span className="span-title">OUR SERVICES</span>
-            <h3 className="section-title">QUALITY SERVICING OPPORTUNITY</h3>
+            <span className="span-title">{t("Service-title")}</span>
+            <h3 className="section-title">{t("Service-subTitle")}</h3>
           </Col>
         </Row>
         <Row>

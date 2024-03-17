@@ -5,8 +5,10 @@ import { FaArrowRight } from "react-icons/fa"
 import { FaArrowDown } from "react-icons/fa"
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
+import { useTranslation } from "react-i18next"
 
 const About = () => {
+  const [t] = useTranslation()
   const [viewIcon, setViewIcon] = useState(false)
   const [viewText, setviewText] = useState(8)
 
@@ -31,13 +33,7 @@ const About = () => {
       case "About":
         return (
           <>
-            <p className={styles.disc}>
-              Building & Construction is one of the trustworthy construction
-              firms located in Jeddah . We are a company that provides
-              high-quality construction services & products . With our
-              commitment to do our best , we have established strong
-              relationships with our clients .
-            </p>
+            <p className={styles.disc}>{t("About-aboutcontant")}</p>
 
             <div className={styles.jurney}>
               <div>
@@ -46,20 +42,20 @@ const About = () => {
                     <span>73</span>
                   </h3>
 
-                  <span className={styles.sub}>STARTED JOURNEY</span>
+                  <span className={styles.sub}>{t("AboutStarted")}</span>
                 </div>
 
                 <div className={styles.right}>
                   <div className={styles.single}>
-                    <span>Emerjency solution anytime</span>
+                    <span>{t("About-feature1")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                   <div className={styles.single}>
-                    <span>Affordable price upto 2 years</span>
+                    <span>{t("About-feature2")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                   <div className={styles.single}>
-                    <span>Reliable & Experienced Team</span>
+                    <span>{t("About-feature3")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                 </div>
@@ -70,12 +66,7 @@ const About = () => {
       case "Vision":
         return (
           <>
-            <p className={styles.disc}>
-              To grow by continually providing useful and significant products,
-              services, and solutions to markets we already serve – and to
-              expand into new areas that build on our competencies and customer
-              interests
-            </p>
+            <p className={styles.disc}>{t("About-visioncontant")}</p>
             <div className={styles.jurney}>
               <div>
                 <div className={styles.left}>
@@ -83,19 +74,19 @@ const About = () => {
                     <span>73</span>
                   </h3>
 
-                  <span className={styles.sub}>STARTED JOURNEY</span>
+                  <span className={styles.sub}>{t("AboutStarted")}</span>
                 </div>
                 <div className={styles.right}>
                   <div className={styles.single}>
-                    <span>Emerjency solution anytime</span>
+                    <span>{t("About-feature1")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                   <div className={styles.single}>
-                    <span>Affordable price upto 2 years</span>
+                    <span>{t("About-feature2")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                   <div className={styles.single}>
-                    <span>Reliable & Experienced Team</span>
+                    <span>{t("About-feature3")}</span>
                     <FaCheck className={styles.icon} />
                   </div>
                 </div>
@@ -106,12 +97,7 @@ const About = () => {
       case "Values":
         return (
           <>
-            <p className={styles.disc}>
-              We are focusing on setting our values with great responsibility &
-              dedication in every deal & offer we get into. Through maintaining
-              the highest level of professionalism, honesty, and fairness in our
-              relationships with our customers, employees, and vendors.
-            </p>
+            <p className={styles.disc}>{t("About-values")}</p>
             <div className={styles.jurney_left}>
               <div>
                 <div className={styles.left}>
@@ -119,7 +105,9 @@ const About = () => {
                     <span>4030423834</span>
                   </h3>
 
-                  <span className={styles.sub}>Commercial Registration</span>
+                  <span className={styles.sub}>
+                    {t("About-CommercialRegistration")}
+                  </span>
                 </div>
               </div>
               <div>
@@ -129,7 +117,7 @@ const About = () => {
                   </h3>
 
                   <span className={styles.sub}>
-                    Chamber Of Commerce Registration
+                    {t("ChamberOfCommerceRegistration")}
                   </span>
                 </div>
               </div>
@@ -153,15 +141,11 @@ const About = () => {
 
                   <div className={styles.detail}>
                     <h5>
-                      Commitment builds lasting trust
+                      {t("About-content")}
                       <br />
-                      fostering strong client relationships ...
+                      {t("About-content-1")}
                       {viewText === Infinity ? (
-                        <>
-                          Through our commitment to excellence, we have forged
-                          robust client relationships, ensuring mutual trust and
-                          satisfaction.
-                        </>
+                        <>{t("About-content-2")}</>
                       ) : null}
                     </h5>
 
@@ -173,7 +157,7 @@ const About = () => {
                         handleIcon()
                       }}
                     >
-                      Read More
+                      {t("About-readmore")}
                       <p>
                         {viewIcon ? (
                           <FaArrowDown className={styles.icon} />
@@ -196,7 +180,7 @@ const About = () => {
                         }`}
                         onClick={() => handleButton("About")}
                       >
-                        About
+                        {t("about-btn1")}
                       </button>
                     </li>
                     <li className={styles.navItem}>
@@ -206,7 +190,7 @@ const About = () => {
                         }`}
                         onClick={() => handleButton("Vision")}
                       >
-                        Vision
+                        {t("about-btn2")}
                       </button>
                     </li>
                     <li className={styles.navItem}>
@@ -216,7 +200,7 @@ const About = () => {
                         }`}
                         onClick={() => handleButton("Values")}
                       >
-                        Values
+                        {t("about-btn3")}
                       </button>
                     </li>
                   </ul>

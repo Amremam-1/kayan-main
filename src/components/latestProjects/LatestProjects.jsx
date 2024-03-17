@@ -5,26 +5,31 @@ import svg2 from "../../../public/assets/images/03.svg"
 import svg3 from "../../../public/assets/images/04.svg"
 import svg4 from "../../../public/assets/images/05.svg"
 import styles from "./styles.module.scss"
-
+import { useTranslation } from "react-i18next"
 const LatestProjects = () => {
+  const [t] = useTranslation()
   return (
     <section className={styles.latestProjects}>
       <Container>
         <Row>
           <div className={styles.container}>
             <div className={styles.top}>
-              <p className={styles.smTitle}>LATEST PROJECTS</p>
+              <p className={styles.smTitle}>{t("portfolio-title")}</p>
               <h3 className={styles.title}>
-                EXCELLENCE DRIVEN FOR GETTING
+                {t("latestTitle")}
                 <br />
-                UNRIVALED RESULTS.
+                {t("latestTitle2")}
               </h3>
             </div>
             <ul className={styles.projectsList}>
-              <ProjectItem img={svg1} num={82} text="Tons Of Customers" />
-              <ProjectItem img={svg2} num={73} text="Compleated Project" />
-              <ProjectItem img={svg3} num={325} text="Team Members" />
-              <ProjectItem img={svg4} num={9} text="Upcoming Projects" />
+              <ProjectItem img={svg1} num={82} text={t("latestPrjectItem1")} />
+              <ProjectItem img={svg2} num={73} text={t("latestProjectItem2")} />
+              <ProjectItem
+                img={svg3}
+                num={325}
+                text={t("latestProjectItem3")}
+              />
+              <ProjectItem img={svg4} num={9} text={t("latestProjectItem4")} />
             </ul>
           </div>
         </Row>

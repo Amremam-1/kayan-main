@@ -5,11 +5,13 @@ import video01 from "../../../public/assets/images/tkman.mp4"
 import video02 from "../../../public/assets/images/تمكين.mp4"
 import Carousel from "react-bootstrap/Carousel"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
+
 const Blog = () => {
   const [showFullText, setShowFullText] = useState(false)
 
   const [userInteracted, setUserInteracted] = useState(false)
-
+  const [t] = useTranslation()
   const toggleTextDisplay = () => {
     setShowFullText(!showFullText)
   }
@@ -23,8 +25,8 @@ const Blog = () => {
     <section className={styles.blog} id="blog">
       <div className={styles.container}>
         <div className={styles.top}>
-          <p className={styles.smTitle}>LATEST BLOG</p>
-          <h2 className={styles.title}>LATEST BLOG INSIGHTS</h2>
+          <p className={styles.smTitle}>{t("blogTitle")}</p>
+          <h2 className={styles.title}>{t("blogTitle")}</h2>
         </div>
         <ul className={styles.blogList}>
           <li className={styles.blogItem}>
@@ -36,7 +38,7 @@ const Blog = () => {
               <Carousel.Item>
                 <div className={styles.image}>
                   <img src={Picture4} alt="blog" />
-                  <span className={styles.note}>CEO</span>
+                  <span className={styles.note}>{t("BlogNickName")}</span>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -65,18 +67,16 @@ const Blog = () => {
 
             <div className={styles.content}>
               <div className={styles.byDate}>
-                <p className={styles.by}>By Hosni Chalabi</p>
+                <p className={styles.by}>{t("BlogName")}</p>
               </div>
               <h3 className={styles.itemTitle}>
-                {showFullText
-                  ? "The power of faith in God is our fuel to achieve and rebuild the earth with charity and achieve goals that once seemed unattainable . Whenever I remember our beginning at Kayan Misr company, how we started, how we Rose and where we stand now, I find myself feeling proud of all the successes and challenges we have overcome, I pray to God to perpetuate his grace on us with success and continuous success . Our success is based on trust in God and constant striving, and success is only from God ."
-                  : "The power of faith in God is our fuel to achieve and rebuild the earth with charity and achieve goals..."}
+                {showFullText ? t("BlogmenagerTextBig") : t("BlogmenagerText")}
               </h3>
               <button
                 className={styles.readDetailsBtn}
                 onClick={toggleTextDisplay}
               >
-                <span>Read Details</span>
+                <span>{t("blogReadDetails")}</span>
                 <FaArrowRight className={styles.icon} />
               </button>
             </div>

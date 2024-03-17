@@ -169,8 +169,11 @@
           background: #0c0a0a;
           margin: 5px 0;
         }
-        p {
+        button {
           cursor: pointer;
+          outline: none;
+          border: none;
+          background: transparent;
         }
       }
 

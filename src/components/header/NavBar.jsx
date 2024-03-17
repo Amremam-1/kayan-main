@@ -8,6 +8,8 @@ import SideBar from "../sideBar/SideBar"
 import logo from "../../../public/assets/images/logo2.jpg"
 import { MdOutlineLanguage } from "react-icons/md"
 
+import { useTranslation } from "react-i18next"
+
 // eslint-disable-next-line react-refresh/only-export-components
 export const links = [
   { id: "#home", display: "Home" },
@@ -21,6 +23,8 @@ export const links = [
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState(-1)
   const [isSideBarOpen, setSideBarOpen] = useState(false)
+
+  const [t, il8next] = useTranslation()
 
   const headerRef = useRef(null)
 
@@ -58,14 +62,14 @@ const NavBar = () => {
             <img src={logo} alt="" />
 
             <div>
-              <h3>Kayan Egypt</h3>
-              <span>Building , Construction</span>
+              <h3>{t("header-nameLogo")}</h3>
+              <span>{t("header-descCompany")}</span>
 
               <p>
                 C.R: <span className={styles.num}>4030423834</span>
               </p>
 
-              <p>K.S.A. JADDAH</p>
+              <p>{t("haader-company-location")}</p>
             </div>
           </div>
           <div className={styles.header_right}>
@@ -73,7 +77,7 @@ const NavBar = () => {
               <MdOutlineEmail className={styles.icon_svg} />
 
               <div className={styles.info}>
-                <span>Send Us Mail</span>
+                <span>{t("header-sendEmail")}</span>
                 <a href="#">Hosny@kayanegypt.net</a>
               </div>
             </div>
@@ -82,9 +86,21 @@ const NavBar = () => {
               <MdOutlineLanguage className={styles.icon_lang} />
 
               <div className={styles.select}>
-                <p>العربيه</p>
+                <button
+                  onClick={() => {
+                    il8next.changeLanguage("ar")
+                  }}
+                >
+                  العربيه
+                </button>
                 <div className={styles.line}></div>
-                <p>English</p>
+                <button
+                  onClick={() => {
+                    il8next.changeLanguage("en")
+                  }}
+                >
+                  English
+                </button>
               </div>
             </div>
 

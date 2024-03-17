@@ -8,6 +8,7 @@ import banner03 from "../../../public/assets/images/landscape2.jpg"
 import styles from "./banner.module.scss"
 import { IoMdArrowRoundUp } from "react-icons/io"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 const images = [
   {
@@ -35,7 +36,8 @@ const images = [
 
 const Banner = () => {
   const [showArrow, setShowArrow] = useState(false)
-
+  const [t] = useTranslation()
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -90,7 +92,7 @@ const Banner = () => {
 
                 <div className={styles.contact}>
                   <a href="#service" className={styles.btn}>
-                    GET STARTED
+                    {t("banner-btnStart")}
                   </a>
                 </div>
               </div>

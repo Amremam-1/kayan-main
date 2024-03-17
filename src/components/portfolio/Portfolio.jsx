@@ -28,7 +28,7 @@ import port16 from "../../../public/assets/images/شعله (3).jpg"
 
 import { useState } from "react"
 import LatestProjects from "../latestProjects/LatestProjects"
-
+import { useTranslation } from "react-i18next"
 // const persons = [
 //   {
 //     img: person01,
@@ -184,6 +184,7 @@ const Portfolio = () => {
 
   const [activeOverlay, setActiveOverlay] = useState(null)
 
+  const [t] = useTranslation()
   const toggleOverlay = (index) => {
     setActiveOverlay(activeOverlay === index ? null : index)
   }
@@ -193,8 +194,8 @@ const Portfolio = () => {
         <Container>
           <Row>
             <Col lg="12" className={styles.title}>
-              <span className="span-title">LATEST PROJECTS</span>
-              <h3 className="section-title">OUR RECENT WORK</h3>
+              <span className="span-title">{t("portfolio-title")}</span>
+              <h3 className="section-title">{t("portfolio-subtitle")}</h3>
             </Col>
           </Row>
         </Container>
