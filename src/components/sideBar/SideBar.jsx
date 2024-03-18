@@ -1,4 +1,3 @@
-import { links } from "../header/NavBar"
 import styles from "./sideBar.module.css"
 import { IoClose } from "react-icons/io5"
 import { FaFacebookF } from "react-icons/fa"
@@ -6,10 +5,39 @@ import { IoLogoTwitter } from "react-icons/io"
 import { useEffect, useState } from "react"
 import { FaInstagram } from "react-icons/fa6"
 import { FaSnapchat } from "react-icons/fa6"
+import { NavLink } from "react-bootstrap"
+import { useTranslation } from "react-i18next"
+// import { MdOutlineLanguage } from "react-icons/md"
+import { IoIosArrowUp } from "react-icons/io"
+import { IoIosArrowDown } from "react-icons/io"
+
+const linksmenu = [
+  { id: "#home", nameEN: "Home", nameAR: "الرئيسية" },
+  { id: "#service", nameEN: "Service", nameAR: "خدمتنا" },
+  { id: "#about", nameEN: "About", nameAR: "حولنا" },
+  { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
+  { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
+  { id: "#contact", nameEN: "Contact", nameAR: "اتصل بنا" },
+  {
+    id: "#language",
+    nameEN: "Language",
+    nameAR: "اللغة",
+    iconUP: IoIosArrowUp,
+    iconDown: IoIosArrowDown,
+  },
+]
+
 // eslint-disable-next-line react/prop-types
 const SideBar = ({ isOpen }) => {
   const [isMenuOpen, setMenuOpen] = useState(false)
+  const [languageDrop, setLanguageDrop] = useState(false)
 
+  const handleLanguageDrop = () => {
+    setLanguageDrop(!languageDrop)
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  const [t, il8n] = useTranslation()
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen)
   }
@@ -27,11 +55,50 @@ const SideBar = ({ isOpen }) => {
       <div className={styles.mobile_menu}>
         <nav>
           <ul>
-            {links.map((item, index) => (
-              <li className={styles.has_droup_down} key={index}>
-                <a href={item.id} className={styles.main}>
-                  {item.display}
-                </a>
+            {linksmenu.map((item, index) => (
+              <li className={styles.menu_item} key={index}>
+                <NavLink
+                  href={item.id}
+                  className={styles.nav_item}
+                  onClick={handleLanguageDrop}
+                >
+                  {il8n.language === "ar" ? item.nameAR : item.nameEN}
+
+                  {item?.iconUP && item?.iconDown ? (
+                    languageDrop ? (
+                      <item.iconDown className={styles.arrow} />
+                    ) : (
+                      <item.iconUP className={styles.arrow} />
+                    )
+                  ) : (
+                    ""
+                  )}
+
+                  {languageDrop && item.id === "#language" && (
+                    <div className={styles.language_dropdown}>
+                      <button
+                        className={
+                          il8n.language === "ar" ? styles.activeLanguage : ""
+                        }
+                        onClick={() => {
+                          il8n.changeLanguage("ar")
+                        }}
+                      >
+                        العربية
+                      </button>
+                      <button
+                        className={
+                          il8n.language === "en" ? styles.activeLanguage : ""
+                        }
+                        onClick={() => {
+                          il8n.changeLanguage("en")
+                        }}
+                      >
+                        English
+                      </button>
+                    </div>
+                  )}
+                </NavLink>
               </li>
             ))}
           </ul>

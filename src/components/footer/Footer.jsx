@@ -1,5 +1,5 @@
 import { FaFacebookF, FaPhoneAlt, FaTwitter } from "react-icons/fa"
-import { TbArrowBigRightFilled } from "react-icons/tb"
+import { TbArrowBigRightFilled, TbArrowBigLeftFilled } from "react-icons/tb"
 import { FaInstagram } from "react-icons/fa6"
 import { FaSnapchat } from "react-icons/fa6"
 
@@ -57,32 +57,64 @@ const Footer = () => {
                   <ul className={styles.fList}>
                     <li className={styles.fItem}>
                       <a href="#about">
-                        <TbArrowBigRightFilled />
+                        {il8n.language === "ar" ? (
+                          <div className={styles.icon}>
+                            <TbArrowBigLeftFilled />
+                          </div>
+                        ) : (
+                          <div className={styles.icon}>
+                            <TbArrowBigRightFilled className={styles.icon} />
+                          </div>
+                        )}
                         <span>{t("footer-link-about")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#service">
-                        <TbArrowBigRightFilled />
+                        {il8n.language === "ar" ? (
+                          <div className={styles.icon}>
+                            <TbArrowBigLeftFilled />
+                          </div>
+                        ) : (
+                          <div className={styles.icon}>
+                            <TbArrowBigRightFilled className={styles.icon} />
+                          </div>
+                        )}
                         <span>{t("footer-link-service")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#portfolio">
-                        <TbArrowBigRightFilled />
+                        {il8n.language === "ar" ? (
+                          <div className={styles.icon}>
+                            <TbArrowBigLeftFilled />
+                          </div>
+                        ) : (
+                          <div className={styles.icon}>
+                            <TbArrowBigRightFilled className={styles.icon} />
+                          </div>
+                        )}
                         <span>{t("footer-link-team")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#contact">
-                        <TbArrowBigRightFilled />
+                        {il8n.language === "ar" ? (
+                          <div className={styles.icon}>
+                            <TbArrowBigLeftFilled />
+                          </div>
+                        ) : (
+                          <div className={styles.icon}>
+                            <TbArrowBigRightFilled className={styles.icon} />
+                          </div>
+                        )}
                         <span>{t("footer-link-contact")}</span>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div className={styles.linksList}>
-                  <h3 className={styles.fTitle}>CONTACT US</h3>
+                  <h3 className={styles.fTitle}>{t("footer-link-contact")}</h3>
                   <ul className={styles.fList}>
                     <li className={styles.fItem}>
                       <a href="#">
@@ -130,8 +162,7 @@ const Footer = () => {
       <div className={styles.copyRights}>
         <div className="mainContainer">
           <p>
-            {t("footer-copyRight")} {" "}
-            {date}
+            {t("footer-copyRight")} {date}
           </p>
         </div>
       </div>

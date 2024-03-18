@@ -87,7 +87,7 @@
     }
   }
 
-  .slideText {
+  .slideTextEn {
     position: absolute;
     bottom: 20px;
     right: 0;
@@ -99,11 +99,33 @@
     background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     width: 90%;
     max-width: 400px;
+
+    border-radius: 5px;
   }
 
-  .slideText.active {
+  .slideTextEn.active {
     opacity: 1;
   }
+}
+
+.slideTextAr {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 33px;
+  opacity: 0;
+  transition: 1s;
+  background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 5px;
+  direction: rtl;
+}
+
+.slideTextAr.active {
+  opacity: 1;
 }
 
 .team {

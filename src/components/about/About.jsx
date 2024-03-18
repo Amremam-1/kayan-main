@@ -113,24 +113,24 @@ const About = () => {
             <div className={styles.jurney_left}>
               <div>
                 <div className={styles.left}>
-                  <h3 className={styles.titleAnimated}>
-                    <span>4030423834</span>
-                  </h3>
-
                   <span className={styles.sub}>
                     {t("About-CommercialRegistration")}
                   </span>
+
+                  <h3 className={styles.titleAnimated}>
+                    <span>4030423834</span>
+                  </h3>
                 </div>
               </div>
               <div>
                 <div className={styles.left}>
-                  <h3 className={styles.titleAnimated}>
-                    <span>411898</span>
-                  </h3>
-
                   <span className={styles.sub}>
                     {t("ChamberOfCommerceRegistration")}
                   </span>
+                  
+                  <h3 className={styles.titleAnimated}>
+                    <span>411898</span>
+                  </h3>
                 </div>
               </div>
             </div>

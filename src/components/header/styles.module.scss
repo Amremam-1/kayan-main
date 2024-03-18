@@ -25,9 +25,9 @@
     padding-right: 50px;
     padding-left: 50px;
   }
-  @media (max-width: 425px) {
-    padding-right: 5px;
-    padding-left: 5px;
+  @media (max-width: 580px) {
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .logo_area {
     height: auto;
@@ -41,9 +41,13 @@
       cursor: pointer;
       margin-inline-end: 20px;
       box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
-      @media (max-width: 425px) {
+      @media (max-width: 520px) {
         width: 80px;
         margin-right: 5px;
+      }
+      @media (max-width: 375px) {
+        width: 80px;
+        margin-inline-end: 10px;
       }
     }
 
@@ -55,26 +59,44 @@
       color: #fff;
       height: fit-content;
       height: 90px;
-
+      @media (max-width: 375px) {
+        text-align: start;
+      }
       h3 {
         font-size: 13px;
         letter-spacing: 3px;
         color: #fff;
         text-transform: uppercase;
         margin: 0;
+
+        @media (max-width: 375px) {
+          width: fit-content;
+        }
       }
 
       span {
         font-size: 13px;
         color: #fff;
+        @media (max-width: 375px) {
+          width: fit-content;
+          font-size: 11px;
+          letter-spacing: 1px;
+        }
       }
 
       p {
         font-size: 13px;
+        @media (max-width: 375px) {
+          width: fit-content;
+          font-size: 11px;
+        }
         .num {
           font-size: 11px;
           letter-spacing: 3px;
           margin-left: 6px;
+          @media (max-width: 375px) {
+            width: fit-content;
+          }
         }
       }
     }
@@ -137,6 +159,10 @@
 
     .language {
       position: relative;
+
+      @media (max-width: 425px) {
+        display: none;
+      }
       .icon_lang {
         font-size: 25px;
         color: #fff;
@@ -197,9 +223,17 @@
       .menuAreaIcon {
         color: #fff;
         font-size: 28px;
+
+        @media (max-width: 375px) {
+          font-size: 20px;
+        }
       }
       @media (max-width: 1199px) {
         display: flex;
+      }
+      @media (max-width: 375px) {
+        height: 35px;
+        width: 35px;
       }
     }
   }

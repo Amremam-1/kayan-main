@@ -14,7 +14,7 @@ const servicesItems = [
     discriptionEn:
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
     discriptionAr:
-      ". تطورات المباني الحديثة والتقنيات المتقدمة والمهندسين المؤهلين تضمن السلامة والجودة في المشاريع",
+      "تطورات المباني الحديثة والتقنيات المتقدمة والمهندسين المؤهلين تضمن السلامة والجودة في المشاريع .",
     content: "01",
     id: "one",
     // images: [
@@ -29,7 +29,7 @@ const servicesItems = [
     discriptionEn:
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     discriptionAr:
-      ". تمزج الهندسة المعمارية بين الإبداع والتكنولوجيا والجماليات والوظائف لإثراء الحياة والثقافة بشكل فعال",
+      "تمزج الهندسة المعمارية بين الإبداع والتكنولوجيا والجماليات والوظائف لإثراء الحياة والثقافة بشكل فعال .",
     content: "02",
     id: "two",
     // images: [
@@ -44,7 +44,7 @@ const servicesItems = [
     discriptionEn:
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     discriptionAr:
-      ". عالم المستقبل مع التصاميم العتيقة والكلاسيكية والحصرية ؛ مجموعات فريدة من الأثاث والاكسسوارات",
+      "عالم المستقبل مع التصاميم العتيقة والكلاسيكية والحصرية ، مجموعات فريدة من الأثاث والاكسسوارات .",
     content: "03",
     id: "three",
     // images: [
@@ -59,7 +59,7 @@ const servicesItems = [
     discriptionEn:
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
     discriptionAr:
-      ". المناظر الطبيعية تحول المناطق في الهواء الطلق مع تصميم وزراعة لنداء الجمالية والأداء الوظيفي",
+      "المناظر الطبيعية تحول المناطق في الهواء الطلق مع تصميم وزراعة لنداء الجمالية والأداء الوظيفي . ",
     content: "04",
     id: "four",
     // images: [
@@ -73,7 +73,7 @@ const servicesItems = [
     titleAr: "آرت وود",
     discriptionEn:
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
-    discriptionAr: ". صياغة الجمال بدقة ومتانة وأناقة خالدة في النجارة",
+    discriptionAr: " صياغة الجمال بدقة ومتانة وأناقة خالدة في النجارة .",
     content: "05",
     id: "five",
     // images: [
@@ -88,7 +88,7 @@ const servicesItems = [
     titleAr: "صيانة المباني",
     discriptionEn:
       "Ensuring longevity and functionality through regular upkeep.",
-    discriptionAr: ". ضمان طول العمر والوظائف من خلال الصيانة المنتظمة.",
+    discriptionAr: "ضمان طول العمر والوظائف من خلال الصيانة المنتظمة .",
     content: "06",
     id: "six",
     // images: ["/assets/images/Picture166.png"],

@@ -277,7 +277,7 @@ const Portfolio = () => {
               >
                 <img src={slide.img} alt="" />
                 <div
-                  className={`${styles.slideText} ${
+                  className={`${il8n.dir() === "rtl" ? styles.slideTextAr : styles.slideTextEn} ${
                     index === activeSlide ? styles.active : ""
                   }`}
                 >

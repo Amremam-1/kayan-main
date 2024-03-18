@@ -39,7 +39,7 @@ const images = [
     titleAr: "مرحبا بكم في كيان مصر",
     about1En: "Establishing values",
     about1Ar: "إنشاء القيم مع المسؤولية بتقديم",
-    aboutEn: "with responsibility",
+    about2En: "with responsibility",
     about3En: "focus",
     about3Ar: "أرقي الخدمات",
   },

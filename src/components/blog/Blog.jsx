@@ -1,17 +1,23 @@
-import { FaArrowRight } from "react-icons/fa6"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
+
 import styles from "./styles.module.scss"
 import Picture4 from "../../../public/assets/images/ceo.jpg"
 import video01 from "../../../public/assets/images/tkman.mp4"
 import video02 from "../../../public/assets/images/تمكين.mp4"
 import Carousel from "react-bootstrap/Carousel"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 const Blog = () => {
   const [showFullText, setShowFullText] = useState(false)
   const [userInteracted, setUserInteracted] = useState(false)
-  const [t] = useTranslation()
-  
+  const [pageDirection, setPageDirection] = useState("ltr")
+
+  const [t, il8n] = useTranslation()
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
   const toggleTextDisplay = () => {
     setShowFullText(!showFullText)
   }
@@ -28,7 +34,7 @@ const Blog = () => {
           <p className={styles.smTitle}>{t("blogTitle")}</p>
           <h2 className={styles.title}>{t("blogTitle")}</h2>
         </div>
-        <ul className={styles.blogList}>
+        <ul className={styles.blogList} style={{ direction: pageDirection }}>
           <li className={styles.blogItem}>
             <Carousel
               className={styles.carousel}
@@ -77,7 +83,11 @@ const Blog = () => {
                 onClick={toggleTextDisplay}
               >
                 <span>{t("blogReadDetails")}</span>
-                <FaArrowRight className={styles.icon} />
+                {il8n.language === "ar" ? (
+                  <FaArrowLeft className={styles.icon} />
+                ) : (
+                  <FaArrowRight className={styles.icon} />
+                )}
               </button>
             </div>
           </li>

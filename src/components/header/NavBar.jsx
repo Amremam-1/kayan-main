@@ -10,8 +10,7 @@ import { MdOutlineLanguage } from "react-icons/md"
 
 import { useTranslation } from "react-i18next"
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const links = [
+const links = [
   { id: "#home", nameEN: "Home", nameAR: "الرئيسية" },
   { id: "#service", nameEN: "Service", nameAR: "خدمتنا" },
   { id: "#about", nameEN: "About", nameAR: "حولنا" },

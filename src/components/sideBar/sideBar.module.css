@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    overflow: visible;
+    /* overflow: visible; */
     transform: translateX(100%);
     transition: transform 0.3s ease;
 }
@@ -81,6 +81,10 @@
     cursor: pointer;
 }
 
+.arrow {
+    margin-inline-start: 10px;
+}
+
 .social_wrapper_one {
     margin-top: 50px;
 }
@@ -123,4 +127,27 @@
     font-size: 18px;
     line-height: 14px;
     color: #FFFFFF;
+}
+
+.language_dropdown {
+    margin-top: 10px;
+}
+
+.language_dropdown button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.language_dropdown button:hover {
+    background-color: #f0f0f0;
+}
+
+.language_dropdown button.activeLanguage {
+    background-color: #007bff;
+    color: #fff;
 }

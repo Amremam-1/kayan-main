@@ -88,3 +88,18 @@ section {
         margin-top: 20px
     }
 }
+
+
+@media(max-width: 330px) {
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        font-size: 35px;
+    }
+}
