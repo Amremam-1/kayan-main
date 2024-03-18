@@ -9,11 +9,22 @@ import { Container, Row } from "react-bootstrap"
 import logo from "../../../public/assets/images/logo2.jpg"
 
 import styles from "./styles.module.scss"
+import { useTranslation } from "react-i18next"
+import { useState, useEffect } from "react"
 
 const Footer = () => {
+  const [t, il8n] = useTranslation()
+  const [pageDiraction, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
+
+  const date = new Date().getFullYear()
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div className={styles.container} style={{ direction: pageDiraction }}>
         <Container>
           <Row>
             <div className={styles.subscribe}>
@@ -23,12 +34,8 @@ const Footer = () => {
             </div>
             <div className={styles.links}>
               <div className={styles.box}>
-                <h3 className={styles.fTitle}>ABOUT COMPANY</h3>
-                <p className={styles.fText}>
-                  Dedication, professionalism, honesty, fairness in all
-                  interactions, ensuring integrity, trust, and transparency in
-                  relationships.
-                </p>
+                <h3 className={styles.fTitle}>{t("footer-about-title")}</h3>
+                <p className={styles.fText}>{t("footer-about-desc")}</p>
                 <div className={styles.social}>
                   <a href="https://www.facebook.com/profile.php?id=61556560361690">
                     <FaFacebookF />
@@ -46,30 +53,30 @@ const Footer = () => {
               </div>
               <div className={styles.box}>
                 <div className={styles.linksList}>
-                  <h3 className={styles.fTitle}>USEFUL LINKS</h3>
+                  <h3 className={styles.fTitle}>{t("footer-useful")}</h3>
                   <ul className={styles.fList}>
                     <li className={styles.fItem}>
                       <a href="#about">
                         <TbArrowBigRightFilled />
-                        <span>About Us</span>
+                        <span>{t("footer-link-about")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#service">
                         <TbArrowBigRightFilled />
-                        <span>Our Services</span>
+                        <span>{t("footer-link-service")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#portfolio">
                         <TbArrowBigRightFilled />
-                        <span>Our Team</span>
+                        <span>{t("footer-link-team")}</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>
                       <a href="#contact">
                         <TbArrowBigRightFilled />
-                        <span>Contact Us</span>
+                        <span>{t("footer-link-contact")}</span>
                       </a>
                     </li>
                   </ul>
@@ -103,13 +110,13 @@ const Footer = () => {
                     </li>
                     <li className={styles.fItem}>
                       <a href="#">
-                        <div className={styles.icon}> 
+                        <div className={styles.icon}>
                           <FaLocationDot />
                         </div>
                         <span>
-                          Ghosn Al Salam,
+                          {t("footer-location1")}
                           <br />
-                          Al-Ruwais, Jeddah.
+                          {t("footer-location2")}
                         </span>
                       </a>
                     </li>
@@ -122,7 +129,10 @@ const Footer = () => {
       </div>
       <div className={styles.copyRights}>
         <div className="mainContainer">
-          <p>Copyright 2024 Kayan Egypt . All Rights Reserved.</p>
+          <p>
+            {t("footer-copyRight")} {" "}
+            {date}
+          </p>
         </div>
       </div>
     </footer>

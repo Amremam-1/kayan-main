@@ -1,3 +1,5 @@
+"use client"
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
@@ -13,31 +15,45 @@ import { useTranslation } from "react-i18next"
 const images = [
   {
     image: banner03,
-    title: "Welcome You To Kayan Egypt",
-    about1: "Delivering top-notch",
-    about2: "construction services",
-    about3: "products",
+    titleEn: "Welcome You To Kayan Egypt",
+    titleAr: "مرحبا بكم في كيان مصر",
+    about1En: "Delivering top-notch",
+    about1Ar: "تقديم أرفع و خدمات التشييد",
+    about2En: "construction services",
+    about3En: "products",
+    about3Ar: "و المنتجات",
   },
   {
     image: banner03,
-    title: "Welcome You To Kayan Egypt",
-    about1: "providing useful",
-    about2: "significant products",
-    about3: "services",
+    titleEn: "Welcome You To Kayan Egypt",
+    titleAr: "مرحبا بكم في كيان مصر",
+    about1En: "providing useful",
+    about1Ar: "توفير منتجات هامه ومفيدة",
+    about2En: "significant products",
+    about3En: "services",
+    about3Ar: "و خدمات مميزه",
   },
   {
     image: banner03,
-    title: "Welcome You To Kayan Egypt",
-    about1: "Establishing values ",
-    about2: "with responsibility",
-    about3: "focus",
+    titleEn: "Welcome You To Kayan Egypt",
+    titleAr: "مرحبا بكم في كيان مصر",
+    about1En: "Establishing values",
+    about1Ar: "إنشاء القيم مع المسؤولية بتقديم",
+    aboutEn: "with responsibility",
+    about3En: "focus",
+    about3Ar: "أرقي الخدمات",
   },
 ]
 
 const Banner = () => {
   const [showArrow, setShowArrow] = useState(false)
-  const [t] = useTranslation()
-  
+  const [t, il8n] = useTranslation()
+  const [pageDirection, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -78,16 +94,19 @@ const Banner = () => {
               <img
                 className={styles.bannerImage}
                 src={item.image}
-                alt={item.title}
+                alt={item.titleEn}
               />
-              <div className={styles.heading}>
-                <h5>{item.title}</h5>
+              <div
+                className={styles.heading}
+                style={{ direction: pageDirection }}
+              >
+                <h5>{il8n.language === "ar" ? item.titleAr : item.titleEn}</h5>
                 <h2>
-                  {item.about1}
+                  {il8n.language === "ar" ? item.about1Ar : item.about1En}
                   <br />
-                  {item.about2}
+                  {il8n.language === "ar" ? item.about3Ar : item.about2En}
                   <br />
-                  {item.about3}
+                  {il8n.language === "ar" ? "" : item.about3En}
                 </h2>
 
                 <div className={styles.contact}>

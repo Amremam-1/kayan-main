@@ -6,10 +6,21 @@ import svg3 from "../../../public/assets/images/04.svg"
 import svg4 from "../../../public/assets/images/05.svg"
 import styles from "./styles.module.scss"
 import { useTranslation } from "react-i18next"
+import { useState, useEffect } from "react"
+
 const LatestProjects = () => {
-  const [t] = useTranslation()
+  const [t, il8n] = useTranslation()
+  const [pageDiraction, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
+
   return (
-    <section className={styles.latestProjects}>
+    <section
+      className={styles.latestProjects}
+      style={{ direction: pageDiraction }}
+    >
       <Container>
         <Row>
           <div className={styles.container}>
@@ -23,7 +34,11 @@ const LatestProjects = () => {
             </div>
             <ul className={styles.projectsList}>
               <ProjectItem img={svg1} num={82} text={t("latestPrjectItem1")} />
-              <ProjectItem img={svg2} num={73} text={t("latestProjectItem2")} />
+              <ProjectItem
+                img={svg2}
+                num={107}
+                text={t("latestProjectItem2")}
+              />
               <ProjectItem
                 img={svg3}
                 num={325}

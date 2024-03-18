@@ -1,16 +1,22 @@
 import { Container, Row, Col } from "react-bootstrap"
 import styles from "./styles.module.scss"
 import service04 from "../../../public/assets/images/ser45.jpg"
-import { FaArrowRight } from "react-icons/fa"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import { FaArrowDown } from "react-icons/fa"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FaCheck } from "react-icons/fa"
 import { useTranslation } from "react-i18next"
 
 const About = () => {
-  const [t] = useTranslation()
   const [viewIcon, setViewIcon] = useState(false)
   const [viewText, setviewText] = useState(8)
+
+  const [t, il8n] = useTranslation()
+  const [pageDirection, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
 
   const handleIcon = () => {
     setViewIcon(!viewIcon)
@@ -27,6 +33,12 @@ const About = () => {
   const handleButton = (buttonName) => {
     setActiveButton(buttonName)
   }
+  const arrowIcon =
+    il8n.language === "ar" ? (
+      <FaArrowLeft className={styles.icon} />
+    ) : (
+      <FaArrowRight className={styles.icon} />
+    )
 
   const getDynamicContent = () => {
     switch (activeButton) {
@@ -134,7 +146,10 @@ const About = () => {
       <Container id="about">
         <Row>
           <Col lg="12">
-            <div className={styles.wrapper}>
+            <div
+              className={styles.wrapper}
+              style={{ direction: pageDirection }}
+            >
               <div className={styles.wrapperImg}>
                 <div>
                   <img src={service04} alt="" />
@@ -162,7 +177,7 @@ const About = () => {
                         {viewIcon ? (
                           <FaArrowDown className={styles.icon} />
                         ) : (
-                          <FaArrowRight className={styles.icon} />
+                          arrowIcon
                         )}
                       </p>
                     </a>

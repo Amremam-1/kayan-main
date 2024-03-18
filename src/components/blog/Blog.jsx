@@ -9,9 +9,9 @@ import { useTranslation } from "react-i18next"
 
 const Blog = () => {
   const [showFullText, setShowFullText] = useState(false)
-
   const [userInteracted, setUserInteracted] = useState(false)
   const [t] = useTranslation()
+  
   const toggleTextDisplay = () => {
     setShowFullText(!showFullText)
   }
@@ -69,9 +69,9 @@ const Blog = () => {
               <div className={styles.byDate}>
                 <p className={styles.by}>{t("BlogName")}</p>
               </div>
-              <h3 className={styles.itemTitle}>
+              <h5 className={styles.itemTitle}>
                 {showFullText ? t("BlogmenagerTextBig") : t("BlogmenagerText")}
-              </h3>
+              </h5>
               <button
                 className={styles.readDetailsBtn}
                 onClick={toggleTextDisplay}

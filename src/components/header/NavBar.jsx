@@ -12,21 +12,25 @@ import { useTranslation } from "react-i18next"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links = [
-  { id: "#home", display: "Home" },
-  { id: "#service", display: "Service" },
-  { id: "#about", display: "About" },
-  { id: "#portfolio", display: "Portfolio" },
-  { id: "#blog", display: "Blog" },
-  { id: "#contact", display: "Contact" },
+  { id: "#home", nameEN: "Home", nameAR: "الرئيسية" },
+  { id: "#service", nameEN: "Service", nameAR: "خدمتنا" },
+  { id: "#about", nameEN: "About", nameAR: "حولنا" },
+  { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
+  { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
+  { id: "#contact", nameEN: "Contact", nameAR: "اتصل بنا" },
 ]
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState(-1)
   const [isSideBarOpen, setSideBarOpen] = useState(false)
-
-  const [t, il8next] = useTranslation()
-
+  const [t, il8n] = useTranslation()
   const headerRef = useRef(null)
+  const [pageDirection, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    // تحديث اتجاه الصفحة عند تغيير اللغة
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
 
   useEffect(() => {
     const headerSticky = () => {
@@ -56,7 +60,10 @@ const NavBar = () => {
   }
   return (
     <>
-      <header className={styles.header_one}>
+      <header
+        className={styles.header_one}
+        style={{ direction: pageDirection }}
+      >
         <div className={styles.header_mid_one_wrapper}>
           <div className={styles.logo_area}>
             <img src={logo} alt="" />
@@ -88,7 +95,7 @@ const NavBar = () => {
               <div className={styles.select}>
                 <button
                   onClick={() => {
-                    il8next.changeLanguage("ar")
+                    il8n.changeLanguage("ar")
                   }}
                 >
                   العربيه
@@ -96,7 +103,7 @@ const NavBar = () => {
                 <div className={styles.line}></div>
                 <button
                   onClick={() => {
-                    il8next.changeLanguage("en")
+                    il8n.changeLanguage("en")
                   }}
                 >
                   English
@@ -110,7 +117,11 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className={styles.header_sticky} ref={headerRef}>
+        <div
+          className={styles.header_sticky}
+          ref={headerRef}
+          // style={{ direction: pageDirection }}
+        >
           <div className={styles.nav_header}>
             <div className={styles.clip_path}></div>
             <div className={styles.wrapper}>
@@ -126,7 +137,7 @@ const NavBar = () => {
                         onClick={() => toggle(index)}
                       >
                         <NavLink href={item.id} className={styles.nav_item}>
-                          {item.display}
+                          {il8n.language === "ar" ? item.nameAR : item.nameEN}
                         </NavLink>
                       </li>
                     ))}

@@ -5,12 +5,16 @@ import "swiper/css"
 import "swiper/css/pagination"
 import { Pagination, Autoplay } from "swiper/modules"
 import { useTranslation } from "react-i18next"
+import { useEffect, useState } from "react"
 
 const servicesItems = [
   {
-    title: "CONSTRUCTION",
-    discription:
+    titleEn: "CONSTRUCTION",
+    titleAr: "البناء",
+    discriptionEn:
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
+    discriptionAr:
+      ". تطورات المباني الحديثة والتقنيات المتقدمة والمهندسين المؤهلين تضمن السلامة والجودة في المشاريع",
     content: "01",
     id: "one",
     // images: [
@@ -20,9 +24,12 @@ const servicesItems = [
     // ],
   },
   {
-    title: "INTERIOR",
-    discription:
+    titleEn: "INTERIOR",
+    titleAr: "الداخلية",
+    discriptionEn:
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
+    discriptionAr:
+      ". تمزج الهندسة المعمارية بين الإبداع والتكنولوجيا والجماليات والوظائف لإثراء الحياة والثقافة بشكل فعال",
     content: "02",
     id: "two",
     // images: [
@@ -32,9 +39,12 @@ const servicesItems = [
     // ],
   },
   {
-    title: "DECORE",
-    discription:
+    titleEn: "DECORE",
+    titleAr: "ديكور",
+    discriptionEn:
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
+    discriptionAr:
+      ". عالم المستقبل مع التصاميم العتيقة والكلاسيكية والحصرية ؛ مجموعات فريدة من الأثاث والاكسسوارات",
     content: "03",
     id: "three",
     // images: [
@@ -44,9 +54,12 @@ const servicesItems = [
     // ],
   },
   {
-    title: "LANDSCAPING",
-    discription:
+    titleEn: "LANDSCAPING",
+    titleAr: "المناظر الطبيعية",
+    discriptionEn:
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
+    discriptionAr:
+      ". المناظر الطبيعية تحول المناطق في الهواء الطلق مع تصميم وزراعة لنداء الجمالية والأداء الوظيفي",
     content: "04",
     id: "four",
     // images: [
@@ -56,9 +69,11 @@ const servicesItems = [
     // ],
   },
   {
-    title: "ART WOOD",
-    discription:
+    titleEn: "ART WOOD",
+    titleAr: "آرت وود",
+    discriptionEn:
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
+    discriptionAr: ". صياغة الجمال بدقة ومتانة وأناقة خالدة في النجارة",
     content: "05",
     id: "five",
     // images: [
@@ -69,8 +84,11 @@ const servicesItems = [
     // ],
   },
   {
-    title: "BUILDING MAINTENANCE",
-    discription: "Ensuring longevity and functionality through regular upkeep.",
+    titleEn: "BUILDING MAINTENANCE",
+    titleAr: "صيانة المباني",
+    discriptionEn:
+      "Ensuring longevity and functionality through regular upkeep.",
+    discriptionAr: ". ضمان طول العمر والوظائف من خلال الصيانة المنتظمة.",
     content: "06",
     id: "six",
     // images: ["/assets/images/Picture166.png"],
@@ -78,7 +96,13 @@ const servicesItems = [
 ]
 
 const Services = () => {
-  const [t] = useTranslation()
+  const [pageDirection, setPageDirection] = useState("ltr")
+  const [t, il8n] = useTranslation()
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
+
   return (
     <section className={styles.services} id="service">
       <Container className={styles.services_container}>
@@ -95,7 +119,8 @@ const Services = () => {
             id="home"
             loop={true}
             pagination={true}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
+            autoplay={{ delay: 2000 }}
             breakpoints={{
               2560: {
                 slidesPerView: 3,
@@ -119,7 +144,10 @@ const Services = () => {
           >
             {servicesItems.map((item, index) => (
               <SwiperSlide key={index} className={styles.bannerSlide}>
-                <div className={styles.serviceCart}>
+                <div
+                  className={styles.serviceCart}
+                  style={{ direction: pageDirection }}
+                >
                   <Swiper
                     spaceBetween={20}
                     slidesPerView={1}
@@ -150,8 +178,14 @@ const Services = () => {
                     ))} */}
                   </Swiper>
                   <div className={styles.serviceItem}>
-                    <h5>{item.title}</h5>
-                    <p>{item.discription}</p>
+                    <h5>
+                      {il8n.language === "ar" ? item.titleAr : item.titleEn}
+                    </h5>
+                    <p>
+                      {il8n.language === "ar"
+                        ? item.discriptionAr
+                        : item.discriptionEn}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

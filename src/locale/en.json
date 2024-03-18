@@ -1,14 +1,9 @@
+
 {
     "header-nameLogo" : "Kayan Egypt",
     "header-descCompany": "Building , Construction",
     "haader-company-location": "K.S.A. JADDAH ",
     "header-sendEmail" : "Send Us Mail",
-    "header-linkHome" : "Home",
-    "header-linkService" : "Service",
-    "header-linkAbout" : "About",
-    "header-linkPortfolio" : "Portfolio",
-    "header-linkBlog" : "Blog",
-    "header-linkContact" : "Contact",
 
 
     "banner-btnStart": "GET STARTED",
@@ -54,5 +49,23 @@
     "BlogName" : "By Hosni Chalabi",
     "BlogmenagerText" : "The power of faith in God is our fuel to achieve and rebuild the earth with charity and achieve goals...",
     "BlogmenagerTextBig" : "The power of faith in God is our fuel to achieve and rebuild the earth with charity and achieve goals that once seemed unattainable . Whenever I remember our beginning at Kayan Misr company, how we started, how we Rose and where we stand now, I find myself feeling proud of all the successes and challenges we have overcome, I pray to God to perpetuate his grace on us with success and continuous success . Our success is based on trust in God and constant striving, and success is only from God .",
-    "blogReadDetails": "Read Details"
+    "blogReadDetails": "Read Details",
+
+
+
+
+
+    "footer-about-title": "ABOUT COMPANY",
+    "footer-about-desc": "Dedication, professionalism, honesty, fairness in allinteractions, ensuring integrity, trust, and transparency inrelationships.",
+    "footer-useful": "USEFUL LINKS",
+    "footer-link-about": "About Us",
+    "footer-link-service": "Our Services",
+    "footer-link-team": "Our Team",
+    "footer-link-contact": "Contact Us",
+    "footer-location1": "Ghosn Al Salam,",
+    "footer-location2": "Al-Ruwais, Jeddah.",
+    "footer-copyRight": "Copyright  Kayan Egypt . All Rights Reserved."
+
+
+
 }

@@ -117,66 +117,101 @@ const images = [
   {
     img: port1,
     id: "1",
-    title: "معارض تمكين للأجهزة المنزلية ",
-    span: "فرع الأمير سلطان",
+    titleEn: "Tamkeen showrooms for home appliances",
+    titleAr: "معارض تمكين للأجهزة المنزلية ",
+    spanEn: "Prince Sultan branch",
+    spanAr: "فرع الأمير سلطان",
   },
-  { img: port2, id: "02", title: "مطعم تغاميس" },
-  { img: port3, id: "03", title: "جامع فكرة بن سعيد المجدوعي" },
-  { img: port4, id: "04", title: "مركز الشعلة" },
-  { img: port5, id: "05", title: "تصميم داخلي سكني" },
-  { img: port6, id: "06", title: "تصميم داخلي إداري" },
+  {
+    img: port2,
+    id: "02",
+    titleEn: "Taghames restaurant",
+    titleAr: "مطعم تغاميس",
+  },
+  {
+    img: port3,
+    id: "03",
+    titleEn: "Fikra bin Said al-majdouei mosque",
+    titleAr: "جامع فكرة بن سعيد المجدوعي",
+  },
+  { img: port4, id: "04", titleEn: "Torch Center", titleAr: "مركز الشعلة" },
+  {
+    img: port5,
+    id: "05",
+    titleEn: "Residential interior design",
+    titleAr: "تصميم داخلي سكني",
+  },
+  {
+    img: port6,
+    id: "06",
+    titleEn: "Administrative interior design",
+    titleAr: "تصميم داخلي إداري",
+  },
   {
     img: port7,
     id: "2",
-    title: "معارض تمكين للأجهزة المنزلية ",
-    span: "فرع الأمير سلطان",
+    titleEn: "Tamkeen showrooms for home appliances",
+    titleAr: "معارض تمكين للأجهزة المنزلية ",
+    spanEn: "Prince Sultan branch",
+    spanAr: "فرع الأمير سلطان",
   },
   {
     img: port8,
     id: "3",
-    title: "معارض تمكين للأجهزة المنزلية ",
-    span: "فرع الأمير سلطان",
+    titleEn: "Tamkeen showrooms for home appliances",
+    titleAr: "معارض تمكين للأجهزة المنزلية ",
+    spanEn: "Prince Sultan branch",
+    spanAr: "فرع الأمير سلطان",
   },
   {
     img: port9,
     id: "4",
-    title: "معارض تمكين للأجهزة المنزلية ",
-    span: "فرع الأمير سلطان",
+    titleEn: "Tamkeen showrooms for home appliances",
+    titleAr: "معارض تمكين للأجهزة المنزلية ",
+    spanEn: "Prince Sultan branch",
+    spanAr: "فرع الأمير سلطان",
   },
   {
     img: port10,
     id: "5",
-    title: "مدارس واحة جدة",
+    titleEn: "Jeddah Oasis schools",
+    titleAr: "مدارس واحة جدة",
   },
   {
     img: port11,
     id: "6",
-    title: "مدارس واحة جدة ",
+    titleEn: "Jeddah Oasis schools",
+    titleAr: "مدارس واحة جدة",
   },
   {
     img: port12,
     id: "8",
-    title: "مدارس واحة جدة ",
+    titleEn: "Jeddah Oasis schools",
+    titleAr: "مدارس واحة جدة",
   },
   {
     img: port13,
     id: "9",
-    title: "مدارس واحة جدة ",
+    titleEn: "Jeddah Oasis schools",
+    titleAr: "مدارس واحة جدة",
   },
   {
     img: port14,
     id: "10",
-    title: "مركز الشعلة",
+    titleEn: "Torch Center",
+    titleAr: "مركز الشعلة",
   },
   {
     img: port15,
     id: "11",
-    title: "مركز الشعلة",
+    titleEn: "Torch Center",
+    titleAr: "مركز الشعلة",
   },
   {
     img: port16,
     id: "12",
-    title: "مركز الشعلة",
+    titleEn: "Torch Center",
+    titleAr: "مركز الشعلة",
   },
 ]
 const Portfolio = () => {
@@ -184,7 +219,7 @@ const Portfolio = () => {
 
   const [activeOverlay, setActiveOverlay] = useState(null)
 
-  const [t] = useTranslation()
+  const [t, il8n] = useTranslation()
   const toggleOverlay = (index) => {
     setActiveOverlay(activeOverlay === index ? null : index)
   }
@@ -246,8 +281,12 @@ const Portfolio = () => {
                     index === activeSlide ? styles.active : ""
                   }`}
                 >
-                  <h5>{slide.title}</h5>
-                  <span>{slide.span}</span>
+                  <h5>
+                    {il8n.language === "ar" ? slide.titleAr : slide.titleEn}
+                  </h5>
+                  <span>
+                    {il8n.language === "ar" ? slide?.spanAr : slide?.spanEn}
+                  </span>
                 </div>
               </div>
             </SwiperSlide>
