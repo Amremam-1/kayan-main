@@ -90,7 +90,7 @@ section {
 }
 
 
-@media(max-width: 330px) {
+@media(max-width: 433px) {
 
     .swiper-button-prev:after,
     .swiper-button-next:after {
@@ -100,6 +100,7 @@ section {
         letter-spacing: 0;
         font-variant: initial;
         line-height: 1;
-        font-size: 35px;
+        font-size: 30px;
+        color: #0C0A0A;
     }
 }
