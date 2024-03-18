@@ -17,7 +17,7 @@ const linksmenu = [
   { id: "#about", nameEN: "About", nameAR: "حولنا" },
   { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
   { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
-  { id: "#contact", nameEN: "Contact", nameAR: "اتصل بنا" },
+  { id: "##footer", nameEN: "Contact", nameAR: "اتصل بنا" },
   {
     id: "#language",
     nameEN: "Language",
@@ -66,9 +66,9 @@ const SideBar = ({ isOpen }) => {
 
                   {item?.iconUP && item?.iconDown ? (
                     languageDrop ? (
-                      <item.iconDown className={styles.arrow} />
-                    ) : (
                       <item.iconUP className={styles.arrow} />
+                    ) : (
+                      <item.iconDown className={styles.arrow} />
                     )
                   ) : (
                     ""

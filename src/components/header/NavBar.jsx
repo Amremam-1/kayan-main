@@ -16,7 +16,7 @@ const links = [
   { id: "#about", nameEN: "About", nameAR: "حولنا" },
   { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
   { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
-  { id: "#contact", nameEN: "Contact", nameAR: "اتصل بنا" },
+  { id: "#footer", nameEN: "Contact", nameAR: "اتصل بنا" },
 ]
 
 const NavBar = () => {

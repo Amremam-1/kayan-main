@@ -23,7 +23,7 @@ const Footer = () => {
   const date = new Date().getFullYear()
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <div className={styles.container} style={{ direction: pageDiraction }}>
         <Container>
           <Row>
@@ -145,11 +145,7 @@ const Footer = () => {
                         <div className={styles.icon}>
                           <FaLocationDot />
                         </div>
-                        <span>
-                          {t("footer-location1")}
-                          <br />
-                          {t("footer-location2")}
-                        </span>
+                        <span>{t("footer-location")}</span>
                       </a>
                     </li>
                   </ul>
