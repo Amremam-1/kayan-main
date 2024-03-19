@@ -14,7 +14,7 @@ const servicesItems = [
     discriptionEn:
       "Modern building developments, advanced techniques, qualified engineers ensure safety and quality in projects.",
     discriptionAr:
-      "تطورات المباني الحديثة والتقنيات المتقدمة والمهندسين المؤهلين تضمن السلامة والجودة في المشاريع .",
+      "تطويرات البناء الحديثة، وتقنيات متقدمة، ومهندسون مؤهلون يضمنون السلامة والجودة في المشاريع.",
     content: "01",
     id: "one",
     // images: [
@@ -25,11 +25,11 @@ const servicesItems = [
   },
   {
     titleEn: "INTERIOR",
-    titleAr: "الداخلية",
+    titleAr: "تصميم الديكور الداخلي",
     discriptionEn:
       "Architecture blends creativity, technology, aesthetics, and functionality to enrich life and culture effectively.",
     discriptionAr:
-      "تمزج الهندسة المعمارية بين الإبداع والتكنولوجيا والجماليات والوظائف لإثراء الحياة والثقافة بشكل فعال .",
+      "الهندسة المعمارية تمزج بين الإبداع والتكنولوجيا والجمالية والوظيفية لإثراء الحياة والثقافة بفعالية",
     content: "02",
     id: "two",
     // images: [
@@ -44,7 +44,7 @@ const servicesItems = [
     discriptionEn:
       "Future world with antique, classic, and exclusive designs; unique collections of furniture and accessories.",
     discriptionAr:
-      "عالم المستقبل مع التصاميم العتيقة والكلاسيكية والحصرية ، مجموعات فريدة من الأثاث والاكسسوارات .",
+      "عالم مستقبلي مع تصاميم أثرية وكلاسيكية وحصرية؛ مجموعات فريدة من الأثاث والإكسسوارات",
     content: "03",
     id: "three",
     // images: [
@@ -55,11 +55,11 @@ const servicesItems = [
   },
   {
     titleEn: "LANDSCAPING",
-    titleAr: "المناظر الطبيعية",
+    titleAr: "تنسيق الحدائق",
     discriptionEn:
       "Landscaping transforms outdoor areas with design and cultivation for aesthetic appeal and functionality.",
     discriptionAr:
-      "المناظر الطبيعية تحول المناطق في الهواء الطلق مع تصميم وزراعة لنداء الجمالية والأداء الوظيفي . ",
+      "يُحول تنسيق الحدائق المساحات الخارجية بتصميمها وزراعتها للجاذبية الجمالية والوظيفية.",
     content: "04",
     id: "four",
     // images: [
@@ -70,10 +70,11 @@ const servicesItems = [
   },
   {
     titleEn: "ART WOOD",
-    titleAr: "آرت وود",
+    titleAr: "فن الخشب",
     discriptionEn:
       "Crafting beauty with precision, durability, and timeless elegance in woodworking",
-    discriptionAr: " صياغة الجمال بدقة ومتانة وأناقة خالدة في النجارة .",
+    discriptionAr:
+      "صياغة الجمال بالدقة والمتانة والأناقة الخالدة في فن النجارة",
     content: "05",
     id: "five",
     // images: [
@@ -88,7 +89,8 @@ const servicesItems = [
     titleAr: "صيانة المباني",
     discriptionEn:
       "Ensuring longevity and functionality through regular upkeep.",
-    discriptionAr: "ضمان طول العمر والوظائف من خلال الصيانة المنتظمة .",
+    discriptionAr:
+      "تضمن الاستمرارية والوظيفية من خلال الصيانة المنتظمة والمنتجة",
     content: "06",
     id: "six",
     // images: ["/assets/images/Picture166.png"],
