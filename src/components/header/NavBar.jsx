@@ -14,9 +14,9 @@ const links = [
   { id: "#home", nameEN: "Home", nameAR: "الرئيسية" },
   { id: "#service", nameEN: "Service", nameAR: "خدمتنا" },
   { id: "#about", nameEN: "About", nameAR: "حولنا" },
-  { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
+  { id: "#portfolio", nameEN: "Portfolio", nameAR: "أعمالنا" },
   { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
-  { id: "#footer", nameEN: "Contact", nameAR: "اتصل بنا" },
+  { id: "#footer", nameEN: "Contact", nameAR: "إتصل بنا" },
 ]
 
 const NavBar = () => {
@@ -97,7 +97,7 @@ const NavBar = () => {
                     il8n.changeLanguage("ar")
                   }}
                 >
-                  العربيه
+                  العربية
                 </button>
                 <div className={styles.line}></div>
                 <button

@@ -42,11 +42,7 @@
       margin-inline-end: 20px;
       box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
       @media (max-width: 520px) {
-        width: 80px;
-        margin-right: 5px;
-      }
-      @media (max-width: 375px) {
-        width: 80px;
+        // width: 80px;
         margin-inline-end: 10px;
       }
     }
@@ -64,11 +60,10 @@
       }
       h3 {
         font-size: 13px;
-        letter-spacing: 3px;
         color: #fff;
         text-transform: uppercase;
         margin: 0;
-
+        font-family: "Cairo", sans-serif;
         @media (max-width: 375px) {
           width: fit-content;
         }
@@ -77,23 +72,24 @@
       span {
         font-size: 13px;
         color: #fff;
+        font-family: "Cairo", sans-serif;
         @media (max-width: 375px) {
           width: fit-content;
           font-size: 11px;
-          letter-spacing: 1px;
         }
       }
 
       p {
         font-size: 13px;
+        font-family: "Cairo", sans-serif;
         @media (max-width: 375px) {
           width: fit-content;
           font-size: 11px;
         }
         .num {
           font-size: 11px;
-          letter-spacing: 3px;
           margin-left: 6px;
+          font-family: "Cairo", sans-serif;
           @media (max-width: 375px) {
             width: fit-content;
           }
@@ -127,6 +123,7 @@
         color: var(--secondry);
         font-weight: 500;
         font-size: 12px;
+        font-family: "Cairo", sans-serif;
         padding: 8px;
       }
 
@@ -139,6 +136,7 @@
           display: block;
           font-weight: 600;
           font-size: 16px;
+          font-family: "Cairo", sans-serif;
           line-height: 24px;
           color: #fff;
           margin-bottom: -3px;
@@ -146,12 +144,13 @@
         a {
           font-weight: 600;
           font-size: 15px;
+          font-family: "Cairo", sans-serif;
           line-height: 30px;
           color: #f2f3f5;
           transition: var(--transition);
 
           &:hover {
-            color: var(--secondry);
+            color: var(--color-primary);
           }
         }
       }
@@ -160,7 +159,7 @@
     .language {
       position: relative;
 
-      @media (max-width: 425px) {
+      @media (max-width: 576px) {
         display: none;
       }
       .icon_lang {
@@ -296,7 +295,6 @@
           text-transform: uppercase;
           color: #fff;
           font-weight: 700;
-          letter-spacing: 0.12em;
           font-size: 16px;
           line-height: 24px;
           transition: var(--transition);

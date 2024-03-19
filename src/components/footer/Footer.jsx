@@ -121,15 +121,7 @@ const Footer = () => {
                         <div className={styles.icon}>
                           <FaPhoneAlt />
                         </div>
-                        <span>+ 966 545831834</span>
-                      </a>
-                    </li>
-                    <li className={styles.fItem}>
-                      <a href="#">
-                        <div className={styles.icon}>
-                          <FaPhoneAlt />
-                        </div>
-                        <span>+ 20 1155668600</span>
+                        <span>+966 12 422 2014</span>
                       </a>
                     </li>
                     <li className={styles.fItem}>

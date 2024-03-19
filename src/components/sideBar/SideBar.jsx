@@ -7,7 +7,6 @@ import { FaInstagram } from "react-icons/fa6"
 import { FaSnapchat } from "react-icons/fa6"
 import { NavLink } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
-// import { MdOutlineLanguage } from "react-icons/md"
 import { IoIosArrowUp } from "react-icons/io"
 import { IoIosArrowDown } from "react-icons/io"
 
@@ -15,9 +14,9 @@ const linksmenu = [
   { id: "#home", nameEN: "Home", nameAR: "الرئيسية" },
   { id: "#service", nameEN: "Service", nameAR: "خدمتنا" },
   { id: "#about", nameEN: "About", nameAR: "حولنا" },
-  { id: "#portfolio", nameEN: "Portfolio", nameAR: "اعمالنا" },
+  { id: "#portfolio", nameEN: "Portfolio", nameAR: "أعمالنا" },
   { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
-  { id: "##footer", nameEN: "Contact", nameAR: "اتصل بنا" },
+  { id: "#footer", nameEN: "Contact", nameAR: "إتصل بنا" },
   {
     id: "#language",
     nameEN: "Language",
@@ -30,10 +29,15 @@ const linksmenu = [
 // eslint-disable-next-line react/prop-types
 const SideBar = ({ isOpen }) => {
   const [isMenuOpen, setMenuOpen] = useState(false)
-  const [languageDrop, setLanguageDrop] = useState(false)
+  const [languageArrowUp, setLanguageArrowUp] = useState(false)
 
-  const handleLanguageDrop = () => {
-    setLanguageDrop(!languageDrop)
+  const handleLanguageLinkClick = (id) => {
+    if (id !== "#language") {
+      setMenuOpen(false) // إغلاق القائمة
+    }
+    if (id === "#language") {
+      setLanguageArrowUp(!languageArrowUp)
+    }
   }
 
   // eslint-disable-next-line no-unused-vars
@@ -60,12 +64,12 @@ const SideBar = ({ isOpen }) => {
                 <NavLink
                   href={item.id}
                   className={styles.nav_item}
-                  onClick={handleLanguageDrop}
+                  onClick={() => handleLanguageLinkClick(item.id)}
                 >
                   {il8n.language === "ar" ? item.nameAR : item.nameEN}
 
-                  {item?.iconUP && item?.iconDown ? (
-                    languageDrop ? (
+                  {item?.iconUP && item?.iconDown && item.id === "#language" ? (
+                    languageArrowUp ? (
                       <item.iconUP className={styles.arrow} />
                     ) : (
                       <item.iconDown className={styles.arrow} />
@@ -74,7 +78,7 @@ const SideBar = ({ isOpen }) => {
                     ""
                   )}
 
-                  {languageDrop && item.id === "#language" && (
+                  {languageArrowUp && item.id === "#language" && (
                     <div className={styles.language_dropdown}>
                       <button
                         className={
