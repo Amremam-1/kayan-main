@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import styles from "./styles.module.scss"
 import service04 from "../../../public/assets/images/ser45.jpg"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
@@ -127,7 +127,7 @@ const About = () => {
                   <span className={styles.sub}>
                     {t("ChamberOfCommerceRegistration")}
                   </span>
-                  
+
                   <h3 className={styles.titleAnimated}>
                     <span>411898</span>
                   </h3>
@@ -142,90 +142,81 @@ const About = () => {
   }
 
   return (
-    <section>
-      <Container id="about">
-        <Row>
-          <Col lg="12">
-            <div
-              className={styles.wrapper}
-              style={{ direction: pageDirection }}
-            >
-              <div className={styles.wrapperImg}>
-                <div>
-                  <img src={service04} alt="" />
+    <section id="about">
+      <Container>
+        <div className={styles.wrapper} style={{ direction: pageDirection }}>
+          <div className={styles.wrapperImg}>
+            <div>
+              <img src={service04} alt="" />
 
-                  <div className={styles.detail}>
-                    <h5>
-                      {t("About-content")}
-                      <br />
-                      {t("About-content-1")}
-                      {viewText === Infinity ? (
-                        <>{t("About-content-2")}</>
-                      ) : null}
-                    </h5>
+              <div className={styles.detail}>
+                <h5>
+                  {t("About-content")}
+                  <br />
+                  {t("About-content-1")}
+                  {viewText === Infinity ? <>{t("About-content-2")}</> : null}
+                </h5>
 
-                    <a
-                      href=""
-                      onClick={(event) => {
-                        event.preventDefault()
-                        toggle()
-                        handleIcon()
-                      }}
-                    >
-                      {t("About-readmore")}
-                      <p>
-                        {viewIcon ? (
-                          <FaArrowDown className={styles.icon} />
-                        ) : (
-                          arrowIcon
-                        )}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.wrapperInfo}>
-                <div className={styles.start}>
-                  <ul className={styles.nav}>
-                    <li className={styles.navItem}>
-                      <button
-                        className={`${styles.navLink} ${
-                          activeButton === "About" ? styles.active : ""
-                        }`}
-                        onClick={() => handleButton("About")}
-                      >
-                        {t("about-btn1")}
-                      </button>
-                    </li>
-                    <li className={styles.navItem}>
-                      <button
-                        className={`${styles.navLink} ${
-                          activeButton === "Vision" ? styles.active : ""
-                        }`}
-                        onClick={() => handleButton("Vision")}
-                      >
-                        {t("about-btn2")}
-                      </button>
-                    </li>
-                    <li className={styles.navItem}>
-                      <button
-                        className={`${styles.navLink} ${
-                          activeButton === "Values" ? styles.active : ""
-                        }`}
-                        onClick={() => handleButton("Values")}
-                      >
-                        {t("about-btn3")}
-                      </button>
-                    </li>
-                  </ul>
-
-                  <div className={styles.tapContent}>{getDynamicContent()}</div>
-                </div>
+                <a
+                  href=""
+                  onClick={(event) => {
+                    event.preventDefault()
+                    toggle()
+                    handleIcon()
+                  }}
+                >
+                  {t("About-readmore")}
+                  <p>
+                    {viewIcon ? (
+                      <FaArrowDown className={styles.icon} />
+                    ) : (
+                      arrowIcon
+                    )}
+                  </p>
+                </a>
               </div>
             </div>
-          </Col>
-        </Row>
+          </div>
+
+          <div className={styles.wrapperInfo}>
+            <div className={styles.start}>
+              <ul className={styles.nav}>
+                <li className={styles.navItem}>
+                  <button
+                    className={`${styles.navLink} ${
+                      activeButton === "About" ? styles.active : ""
+                    }`}
+                    onClick={() => handleButton("About")}
+                  >
+                    {t("about-btn1")}
+                  </button>
+                </li>
+                <li className={styles.navItem}>
+                  <button
+                    className={`${styles.navLink} ${
+                      activeButton === "Vision" ? styles.active : ""
+                    }`}
+                    onClick={() => handleButton("Vision")}
+                  >
+                    {t("about-btn2")}
+                  </button>
+                </li>
+                <li className={styles.navItem}>
+                  <button
+                    className={`${styles.navLink} ${
+                      activeButton === "Values" ? styles.active : ""
+                    }`}
+                    onClick={() => handleButton("Values")}
+                  >
+                    {t("about-btn3")}
+                  </button>
+                </li>
+              </ul>
+
+              <div className={styles.tapContent}>{getDynamicContent()}</div>
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   )

@@ -1,10 +1,11 @@
 .getInTouch {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 40px;
 }
 
 .getInTouch .container {
-  // display: flex;
+  display: flex;
   gap: 20px;
 }
 
@@ -14,15 +15,15 @@
   }
 
   .getInTouch .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 50px;
+    padding-bottom: 30px;
   }
 }
 
 .getInTouch .map {
   flex: 0 0 49%;
 }
-
 .getInTouch .message {
   flex: 1 0 49%;
   background: #f2f2f2;
@@ -41,22 +42,22 @@
 .getInTouch .message .top {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .getInTouch .message .top .text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 30px;
   color: #0c0a0a;
 }
 
 .getInTouch .message .top .title {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 60px;
-  color: #0c0a0a;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
@@ -71,85 +72,42 @@
   }
 }
 
-.getInTouch .message .messageForm {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
-  overflow: hidden;
-}
+.info {
+  margin-top: 40px;
+  .info_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
 
-.getInTouch .message .messageForm input,
-.getInTouch .message .messageForm select,
-.getInTouch .message .messageForm textarea {
-  flex: 1 0 47%;
-  height: 60px;
-  background: #ffffff;
-  display: block;
-  padding: 0 30px;
-  border: 1px solid transparent;
-  outline: none;
-  transition: all 0.4s ease-out 0s;
-  color: var(--color-primary);
-  border-radius: 2px;
-}
+    .address_icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-inline-end: 20px;
+      .icon {
+        font-size: 30px;
+        color: var(--color-primary);
+      }
+    }
 
-.getInTouch .message .messageForm input:focus,
-.getInTouch .message .messageForm select:focus,
-.getInTouch .message .messageForm textarea:focus {
-  border-color: var(--color-primary);
-}
+    .address_text {
+      display: flex;
+      flex-direction: column;
 
-.getInTouch .message .messageForm .selectOption {
-  flex: 1 0 100%;
-}
+      span {
+        color: #0c0a0a;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: block;
+      }
 
-.getInTouch .message .messageForm textarea {
-  flex: 1 0 100%;
-  background: #ffffff;
-  border: none;
-  height: 120px;
-  padding: 20px;
-  font-size: 16px;
-  min-height: calc(1.5em + (0.75rem + 2px));
-}
-
-.submitButton {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 20px 33px;
-  line-height: 10px;
-  max-width: max-content;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: 0.3s;
-  border: none;
-  border-radius: 2px;
-  display: block;
-  min-width: max-content;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.submitButton::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: var(--secondry);
-  transform: translateY(110%);
-  transition: 0.3s;
-  transition-delay: 0.1s;
-  z-index: -1;
-  /* opacity: 0; */
-}
-
-.submitButton:hover::before {
-  transform: translateY(0%);
-  /* opacity: 1; */
+      a,
+      .desc {
+        color: #b6b4b4;
+        font-size: 18px;
+      }
+    }
+  }
 }

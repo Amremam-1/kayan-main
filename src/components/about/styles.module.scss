@@ -89,6 +89,9 @@ section {
         //   align-items: stretch;
         height: 100%;
 
+        @media (max-width: 425px) {
+          padding: 5px;
+        }
         .nav {
           background: #f2f3f5;
           padding: 20px 30px;
@@ -167,7 +170,7 @@ section {
 
       @media (max-width: 425px) {
         flex-direction: column;
-        align-items: flex-start;
+        // align-items: flex-start;
       }
       .left {
         display: flex;
