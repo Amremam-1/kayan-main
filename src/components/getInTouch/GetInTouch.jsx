@@ -3,10 +3,19 @@
 import styles from "./style/styles.module.scss"
 import { HiOutlineMail } from "react-icons/hi"
 import { FaPhoneAlt } from "react-icons/fa"
-
 import { IoLocationOutline } from "react-icons/io5"
 
+import { useTranslation } from "react-i18next"
+import { useState, useEffect } from "react"
+
 const GetInTouch = () => {
+  const [t, il8n] = useTranslation()
+  const [pageDiraction, setPageDirection] = useState("ltr")
+
+  useEffect(() => {
+    setPageDirection(il8n.language === "ar" ? "rtl" : "ltr")
+  }, [il8n.language])
+
   return (
     <section className={styles.getInTouch} id="contact">
       <div className={styles.container}>
@@ -23,14 +32,10 @@ const GetInTouch = () => {
             </iframe>
           </div>
         </div>
-        <div className={styles.message}>
+        <div className={styles.message} style={{ direction: pageDiraction }}>
           <div className={styles.top}>
-            <h3 className={styles.title}>Our Address</h3>
-            <p className={styles.text}>
-              completely synergies resource taxing relationships via premier
-              niche markets. Professionally cultivate one-to-one customer
-              service
-            </p>
+            <h3 className={styles.title}>{t("address-title")}</h3>
+            <p className={styles.text}>{t("address-title-content")}</p>
           </div>
 
           <div className={styles.info}>
@@ -39,10 +44,8 @@ const GetInTouch = () => {
                 <IoLocationOutline className={styles.icon} />
               </div>
               <div className={styles.address_text}>
-                <span>Address :</span>
-                <p className={styles.desc}>
-                  Ghosn Al Salam, Al-Ruwais, Jeddah.
-                </p>
+                <span>{t("address")}</span>
+                <p className={styles.desc}>{t("footer-location")}</p>
               </div>
             </div>
 
@@ -51,7 +54,7 @@ const GetInTouch = () => {
                 <FaPhoneAlt className={styles.icon} />
               </div>
               <div className={styles.address_text}>
-                <span>Phone :</span>
+                <span>{t("phone")}</span>
                 <a href="tel:+966 12 422 2014">+966 12 422 2014</a>
               </div>
             </div>
@@ -61,7 +64,7 @@ const GetInTouch = () => {
                 <HiOutlineMail className={styles.icon} />
               </div>
               <div className={styles.address_text}>
-                <span>Email : </span>
+                <span>{t("email")}</span>
                 <a href="">Hosny@kayanegypt.net</a>
               </div>
             </div>

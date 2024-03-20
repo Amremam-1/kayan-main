@@ -16,7 +16,7 @@ const linksmenu = [
   { id: "#about", nameEN: "About", nameAR: "حولنا" },
   { id: "#portfolio", nameEN: "Portfolio", nameAR: "أعمالنا" },
   { id: "#blog", nameEN: "Blog", nameAR: "الرؤية" },
-  { id: "#footer", nameEN: "Contact", nameAR: "إتصل بنا" },
+  { id: "#contact", nameEN: "Contact", nameAR: "إتصل بنا" },
   {
     id: "#language",
     nameEN: "Language",

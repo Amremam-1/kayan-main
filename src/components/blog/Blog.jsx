@@ -31,7 +31,6 @@ const Blog = () => {
     <section className={styles.blog} id="blog">
       <div className={styles.container}>
         <div className={styles.top}>
-          <p className={styles.smTitle}>{t("blogTitle")}</p>
           <h2 className={styles.title}>{t("blogTitle")}</h2>
         </div>
         <ul className={styles.blogList} style={{ direction: pageDirection }}>

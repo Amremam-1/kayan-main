@@ -79,6 +79,11 @@
   position: relative;
   padding-bottom: 24px;
   margin-bottom: 35px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+  }
 }
 
 .box .fText {

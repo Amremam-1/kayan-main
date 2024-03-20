@@ -105,8 +105,9 @@
 
       a,
       .desc {
-        color: #b6b4b4;
+        color: var(--color-primary);
         font-size: 18px;
+        direction: ltr;
       }
     }
   }

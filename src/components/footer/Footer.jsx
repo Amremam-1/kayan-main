@@ -23,7 +23,7 @@ const Footer = () => {
   const date = new Date().getFullYear()
 
   return (
-    <footer className={styles.footer} id="footer">
+    <footer className={styles.footer}>
       <div className={styles.container} style={{ direction: pageDiraction }}>
         <Container>
           <Row>

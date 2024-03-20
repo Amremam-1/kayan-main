@@ -79,7 +79,7 @@ section {
 
 @media(max-width: 465px) {
     .section-title {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 30px;
         margin-top: 20px
     }
