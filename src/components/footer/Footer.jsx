@@ -83,7 +83,7 @@ const Footer = () => {
                         <span>{t("footer-link-service")}</span>
                       </a>
                     </li>
-                    <li className={styles.fItem}>
+                    {/* <li className={styles.fItem}>
                       <a href="#portfolio">
                         {il8n.language === "ar" ? (
                           <div className={styles.icon}>
@@ -96,7 +96,7 @@ const Footer = () => {
                         )}
                         <span>{t("footer-link-team")}</span>
                       </a>
-                    </li>
+                    </li> */}
                     <li className={styles.fItem}>
                       <a href="#contact">
                         {il8n.language === "ar" ? (
