@@ -122,7 +122,7 @@ const Services = () => {
             loop={true}
             pagination={true}
             modules={[Pagination, Autoplay]}
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 8000 }}
             breakpoints={{
               2560: {
                 slidesPerView: 3,

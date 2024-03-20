@@ -207,6 +207,10 @@ section {
         margin-top: 20px;
         margin-inline-start: 27px;
 
+        @media (max-width: 425px) {
+          margin: 0;
+          padding: 0 10px;
+        }
         .single {
           // margin-bottom: 7px;
           margin-bottom: 7px;
