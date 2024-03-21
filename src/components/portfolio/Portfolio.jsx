@@ -117,9 +117,9 @@ const images = [
   {
     img: port1,
     id: "1",
-    titleEn: "Tamkeen showrooms for home appliances",
-    titleAr: "معارض تمكين للأجهزة المنزلية ",
-    spanEn: "Prince Sultan branch",
+    titleEn: "Tamkeen Stores",
+    titleAr: "معارض تمكين للأجهزة المنزلية",
+    spanEn: "fr3 alamyr sl6an",
     spanAr: "فرع الأمير سلطان",
   },
   {
@@ -134,83 +134,83 @@ const images = [
     titleEn: "Fikra bin Said al-majdouei mosque",
     titleAr: "جامع فكرة بن سعيد المجدوعي",
   },
-  { img: port4, id: "04", titleEn: "Torch Center", titleAr: "مركز الشعلة" },
+  { img: port4, id: "04", titleEn: "Mrkz Alsh3la", titleAr: "مركز الشعلة" },
   {
     img: port5,
     id: "05",
-    titleEn: "Residential interior design",
+    titleEn: "Tsmym Da5ly Skny",
     titleAr: "تصميم داخلي سكني",
   },
   {
     img: port6,
     id: "06",
-    titleEn: "Administrative interior design",
+    titleEn: "Tsmym Da5ly  Edary",
     titleAr: "تصميم داخلي إداري",
   },
   {
     img: port7,
     id: "2",
-    titleEn: "Tamkeen showrooms for home appliances",
-    titleAr: "معارض تمكين للأجهزة المنزلية ",
-    spanEn: "Prince Sultan branch",
+    titleEn: "Tamkeen Stores",
+    titleAr: "معارض تمكين للأجهزة المنزلية",
+    spanEn: "Fr3 Alamyr Sl6an",
     spanAr: "فرع الأمير سلطان",
   },
   {
     img: port8,
     id: "3",
-    titleEn: "Tamkeen showrooms for home appliances",
-    titleAr: "معارض تمكين للأجهزة المنزلية ",
-    spanEn: "Prince Sultan branch",
+    titleEn: "Tamkeen Stores",
+    titleAr: "معارض تمكين للأجهزة المنزلية",
+    spanEn: "Fr3 Alamyr Sl6an",
     spanAr: "فرع الأمير سلطان",
   },
   {
     img: port9,
     id: "4",
-    titleEn: "Tamkeen showrooms for home appliances",
-    titleAr: "معارض تمكين للأجهزة المنزلية ",
-    spanEn: "Prince Sultan branch",
+    titleEn: "Tamkeen Stores",
+    titleAr: "معارض تمكين للأجهزة المنزلية",
+    spanEn: "fr3 alamyr sl6an",
     spanAr: "فرع الأمير سلطان",
   },
   {
     img: port10,
     id: "5",
-    titleEn: "Jeddah Oasis schools",
+    titleEn: "Mdars Wa7a Gda",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port11,
     id: "6",
-    titleEn: "Jeddah Oasis schools",
+    titleEn: "Mdars Wa7a Gda",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port12,
     id: "8",
-    titleEn: "Jeddah Oasis schools",
+    titleEn: "Mdars Wa7a Gda",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port13,
     id: "9",
-    titleEn: "Jeddah Oasis schools",
+    titleEn: "Mdars Wa7a Gda",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port14,
     id: "10",
-    titleEn: "Torch Center",
+    titleEn: "Mrkz Alsh3la",
     titleAr: "مركز الشعلة",
   },
   {
     img: port15,
     id: "11",
-    titleEn: "Torch Center",
+    titleEn: "Mrkz Alsh3la",
     titleAr: "مركز الشعلة",
   },
   {
     img: port16,
     id: "12",
-    titleEn: "Torch Center",
+    titleEn: "Mrkz Alsh3la",
     titleAr: "مركز الشعلة",
   },
 ]
@@ -277,9 +277,11 @@ const Portfolio = () => {
               >
                 <img src={slide.img} alt="" />
                 <div
-                  className={`${il8n.dir() === "rtl" ? styles.slideTextAr : styles.slideTextEn} ${
-                    index === activeSlide ? styles.active : ""
-                  }`}
+                  className={`${
+                    il8n.dir() === "rtl"
+                      ? styles.slideTextAr
+                      : styles.slideTextEn
+                  } ${index === activeSlide ? styles.active : ""}`}
                 >
                   <h5>
                     {il8n.language === "ar" ? slide.titleAr : slide.titleEn}
