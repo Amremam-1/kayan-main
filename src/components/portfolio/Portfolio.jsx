@@ -174,25 +174,25 @@ const images = [
   {
     img: port10,
     id: "5",
-    titleEn: "Mdars Wa7a Gda",
+    titleEn: "Wahat Jeddah",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port11,
     id: "6",
-    titleEn: "Mdars Wa7a Gda",
+    titleEn: "Wahat Jeddah",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port12,
     id: "8",
-    titleEn: "Mdars Wa7a Gda",
+    titleEn: "Wahat Jeddah",
     titleAr: "مدارس واحة جدة",
   },
   {
     img: port13,
     id: "9",
-    titleEn: "Mdars Wa7a Gda",
+    titleEn: "Wahat Jeddah",
     titleAr: "مدارس واحة جدة",
   },
   {
